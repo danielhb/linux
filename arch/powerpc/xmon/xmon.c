@@ -26,6 +26,7 @@
 #include <linux/ctype.h>
 #include <linux/highmem.h>
 #include <linux/security.h>
+#include <linux/uaccess.h>
 
 #include <asm/debugfs.h>
 #include <asm/ptrace.h>
@@ -758,6 +759,24 @@ static int xmon_bpt(struct pt_regs *regs)
 {
 	struct bpt *bp;
 	unsigned long offset;
+
+	if (regs->msr & MSR_PR) {
+		u32 instr;
+		u32 __user *nip = (u32 __user *)regs->nip;
+
+		if (unlikely(__get_user_inatomic(instr, nip)))
+			return 0;
+
+		/* tweq r8, r8 */
+		if ((instr == 0x7C884008) || (instr == 0x00000200)) {
+			if (xmon_core(regs, 0)) {
+				regs->nip += 4;
+				/* can't emulate single step */
+				return 1;
+				}
+			return 0;
+		}
+	}
 
 	if ((regs->msr & (MSR_IR|MSR_PR|MSR_64BIT)) != (MSR_IR|MSR_64BIT))
 		return 0;
