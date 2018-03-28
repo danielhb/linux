@@ -9861,6 +9861,8 @@ out_free_res_entries:
 	goto out;
 }
 
+static int enabled = 1;
+
 /**
  * ipr_initialize_bus_attr - Initialize SCSI bus attributes to default values
  * @ioa_cfg:	ioa config struct
@@ -10869,6 +10871,11 @@ static struct notifier_block ipr_notifier = {
  **/
 static int __init ipr_init(void)
 {
+	if (!enabled) {
+		printk("IPR: disabled\n");
+		return 0;
+	}
+
 	ipr_info("IBM Power RAID SCSI Device Driver version: %s %s\n",
 		 IPR_DRIVER_VERSION, IPR_DRIVER_DATE);
 
@@ -10892,3 +10899,6 @@ static void __exit ipr_exit(void)
 
 module_init(ipr_init);
 module_exit(ipr_exit);
+
+module_param(enabled, uint, 0400);
+MODULE_PARM_DESC(enabled, "Enable/Disable adapter");
