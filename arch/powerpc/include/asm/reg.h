@@ -752,6 +752,8 @@
 #define SPRN_USPRG6	0x106	/* SPRG6 userspace read */
 #define SPRN_SPRG7	0x117	/* Special Purpose Register General 7 */
 #define SPRN_USPRG7	0x107	/* SPRG7 userspace read */
+#define SPRN_SPRC	0x114	/* Scan Communication Facility Addr */
+#define SPRN_SPRD	0x115	/* Scan Communication Facility Data */
 #define SPRN_SRR0	0x01A	/* Save/Restore Register 0 */
 #define SPRN_SRR1	0x01B	/* Save/Restore Register 1 */
 
@@ -1348,6 +1350,7 @@
 #define PVR_POWER8NVL	0x004C
 #define PVR_POWER8	0x004D
 #define PVR_POWER9	0x004E
+#define PVR_POWER9P	0x004F
 #define PVR_POWER10	0x0080
 #define PVR_BE		0x0070
 #define PVR_PA6T	0x0090

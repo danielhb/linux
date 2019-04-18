@@ -32,6 +32,61 @@
 
 static DEFINE_PER_CPU(struct cpu, cpu_devices);
 
+static void write_scratch_sprc(void)
+{
+	unsigned long sprc;
+
+	if (pvr_version_is(PVR_POWER8) || pvr_version_is(PVR_POWER8E))
+		sprc = (0x8 | (smp_processor_id() & 0x7)) << 3;
+	else if (pvr_version_is(PVR_POWER9) || pvr_version_is(PVR_POWER9P) ||
+		pvr_version_is(PVR_POWER10))
+		sprc = (smp_processor_id() & 0x3) << 3;
+	else
+		BUG();
+
+	mtspr(SPRN_SPRC, sprc);
+}
+
+static void read_scratch(void *val)
+{
+	write_scratch_sprc();
+	*(unsigned long *)val = mfspr(SPRN_SPRD);
+}
+
+static void write_scratch(void *val)
+{
+	write_scratch_sprc();
+	mtspr(SPRN_SPRD, *(unsigned long *)val);
+}
+
+static ssize_t show_scratch(struct device *dev,
+			    struct device_attribute *attr,
+			    char *buf)
+{
+	struct cpu *cpu = container_of(dev, struct cpu, dev);
+	unsigned long val;
+	smp_call_function_single(cpu->dev.id, read_scratch, &val, 1);
+	return sprintf(buf, "%lx\n", val);
+}
+
+static ssize_t __used
+	store_scratch(struct device *dev, struct device_attribute *attr,
+			const char *buf, size_t count)
+{
+	struct cpu *cpu = container_of(dev, struct cpu, dev);
+	unsigned long val;
+	int ret = sscanf(buf, "%lx", &val);
+	if (ret != 1)
+		return -EINVAL;
+	smp_call_function_single(cpu->dev.id, write_scratch, &val, 1);
+	return count;
+}
+
+
+/*
+ * SMT snooze delay stuff, 64-bit only for now
+ */
+
 #ifdef CONFIG_PPC64
 
 /*
@@ -591,6 +646,7 @@ static DEVICE_ATTR(spurr, 0400, show_spurr, NULL);
 static DEVICE_ATTR(purr, 0400, show_purr, store_purr);
 static DEVICE_ATTR(pir, 0400, show_pir, NULL);
 static DEVICE_ATTR(tscr, 0600, show_tscr, store_tscr);
+static DEVICE_ATTR(scratch, 0600, show_scratch, store_scratch);
 #endif /* CONFIG_PPC64 */
 
 #ifdef HAS_PPC_PMC_CLASSIC
@@ -905,6 +961,9 @@ static int register_cpu_online(unsigned int cpu)
 	if (cpu_has_feature(CPU_FTR_ARCH_206) &&
 		!firmware_has_feature(FW_FEATURE_LPAR))
 		device_create_file(s, &dev_attr_tscr);
+
+	if (!firmware_has_feature(FW_FEATURE_LPAR))
+		device_create_file(s, &dev_attr_scratch);
 #endif /* CONFIG_PPC64 */
 
 #ifdef CONFIG_PPC_FSL_BOOK3E
@@ -1000,6 +1059,9 @@ static int unregister_cpu_online(unsigned int cpu)
 	if (cpu_has_feature(CPU_FTR_ARCH_206) &&
 		!firmware_has_feature(FW_FEATURE_LPAR))
 		device_remove_file(s, &dev_attr_tscr);
+
+	if (!firmware_has_feature(FW_FEATURE_LPAR))
+		device_remove_file(s, &dev_attr_scratch);
 #endif /* CONFIG_PPC64 */
 
 #ifdef CONFIG_PPC_FSL_BOOK3E
