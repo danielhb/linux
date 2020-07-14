@@ -326,6 +326,14 @@ PHONY += ppc64_guest_defconfig
 ppc64_guest_defconfig:
 	$(call merge_into_defconfig,ppc64_defconfig,be guest)
 
+PHONY += ppc64le_bml_defconfig
+ppc64le_bml_defconfig:
+	$(call merge_into_defconfig,ppc64_defconfig,le bml)
+
+PHONY += powernv_bml_defconfig
+powernv_bml_defconfig:
+	$(call merge_into_defconfig,powernv_defconfig,bml)
+
 PHONY += powernv_be_defconfig
 powernv_be_defconfig:
 	$(call merge_into_defconfig,powernv_defconfig,be)
