@@ -1,0 +1,337 @@
+[
+  {
+    "EventCode": "100FE",
+    "EventName": "PM_INST_CMPL",
+    "BriefDescription": "Number of PowerPC Instructions that completed."
+  },
+  {
+    "EventCode": "10006",
+    "EventName": "PM_DISP_STALL_HELD_OTHER_CYC",
+    "BriefDescription": "Dispatch Held for any other reason"
+  },
+  {
+    "EventCode": "1000C",
+    "EventName": "PM_LSU_LD0_FIN",
+    "BriefDescription": "LSU Finished a PPC instruction in LD0 port"
+  },
+  {
+    "EventCode": "1000E",
+    "EventName": "PM_MMA_ISSUED",
+    "BriefDescription": "MMA instruction issued to the VSU"
+  },
+  {
+    "EventCode": "10012",
+    "EventName": "PM_LSU_ST0_FIN",
+    "BriefDescription": "LSU Finished a PPC instruction in ST0 port"
+  },
+  {
+    "EventCode": "10014",
+    "EventName": "PM_LSU_ST4_FIN",
+    "BriefDescription": "LSU Finished a PPC instruction in ST4 port"
+  },
+  {
+    "EventCode": "10018",
+    "EventName": "PM_IC_DEMAND_CYC",
+    "BriefDescription": "Cycles in which an instruction reload is pending to satisfy a demand miss"
+  },
+  {
+    "EventCode": "10022",
+    "EventName": "PM_PMC2_SAVED",
+    "BriefDescription": "PMC2 Rewind Value saved"
+  },
+  {
+    "EventCode": "10024",
+    "EventName": "PM_PMC5_OVERFLOW",
+    "BriefDescription": "Overflow from counter 5"
+  },
+  {
+    "EventCode": "10056",
+    "EventName": "PM_MEM_READ",
+    "BriefDescription": "Reads from Memory from this thread (includes data/inst/xlate/l1prefetch/inst prefetch). Includes L4"
+  },
+  {
+    "EventCode": "10058",
+    "EventName": "PM_EXEC_STALL_FIN_AT_DISP",
+    "BriefDescription": "The oldest instruction in the pipeline was one that finishes at dispatch and doesn't require execution in LSU, BRU or VSU"
+  },
+  {
+    "EventCode": "1005A",
+    "EventName": "PM_FLUSH_MPRED",
+    "BriefDescription": "A flush occurred due to a mispredicted branch.  Includes target and direction"
+  },
+  {
+    "EventCode": "1C05A",
+    "EventName": "PM_DERAT_MISS_2M",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 2M. Implies radix translation.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "10064",
+    "EventName": "PM_DISP_STALL_IC_L2",
+    "BriefDescription": "Dispatch was stalled while the instruction was fetched from the local L2.  The ICT was empty for the duration of this stall"
+  },
+  {
+    "EventCode": "10068",
+    "EventName": "PM_BR_FIN",
+    "BriefDescription": "A branch instruction finished.  Includes predicted/mispredicted/unconditional"
+  },
+  {
+    "EventCode": "1006A",
+    "EventName": "PM_FX_LSU_FIN",
+    "BriefDescription": "Simple fixed point instruction issued to the store unit.  Measured at finish time"
+  },
+  {
+    "EventCode": "1006C",
+    "EventName": "PM_RUN_CYC_ST_MODE",
+    "BriefDescription": "Cycles run latch is set and core is in ST mode"
+  },
+  {
+    "EventCode": "20004",
+    "EventName": "PM_ISSUE_STALL",
+    "BriefDescription": "The oldest instruction in the pipeline has been dispatched but not yet issued."
+  },
+  {
+    "EventCode": "2000A",
+    "EventName": "PM_HYPERVISOR_CYC",
+    "BriefDescription": "Cycles in which msr_hv is high and msr_pr is low.  These are considered hypervisor cycles in ISA 3.01"
+  },
+  {
+    "EventCode": "2000E",
+    "EventName": "PM_LSU_LD1_FIN",
+    "BriefDescription": "LSU Finished a PPC instruction in LD1 port"
+  },
+  {
+    "EventCode": "2C014",
+    "EventName": "PM_CMPL_STALL_SPECIAL",
+    "BriefDescription": "Finish stall because the NTF instruction required special handling before completion"
+  },
+  {
+    "EventCode": "2C018",
+    "EventName": "PM_EXEC_STALL_DMISS_L3MISS",
+    "BriefDescription": "Cycles in which the oldest instruction in the pipeline was waiting for a load miss to resolve from a source beyond the local L2 and local L3"
+  },
+  {
+    "EventCode": "2D010",
+    "EventName": "PM_LSU_ST1_FIN",
+    "BriefDescription": "LSU Finished a PPC instruction in ST1 port"
+  },
+  {
+    "EventCode": "2D012",
+    "EventName": "PM_VSU1_ISSUE",
+    "BriefDescription": "VSU instruction was issued to VSU pipe 1"
+  },
+  {
+    "EventCode": "2D018",
+    "EventName": "PM_EXEC_STALL_VSU",
+    "BriefDescription": "The oldest instructio in the pipeline is executing in the VSU.  Includes FXU, VSU, CRU"
+  },
+  {
+    "EventCode": "2E01E",
+    "EventName": "PM_EXEC_STALL_NTC_FLUSH",
+    "BriefDescription": "Cycles spent executing an NTC instruction that gets flushed some time after dispatch.  Note that if the flush of the oldest instruction happens after finish, the cycles from dispatch to issue will be included in PM_DISP_STALL and the cycles from issue to finish will be included in PM_EXEC_STALL and its corresponding children."
+  },
+  {
+    "EventCode": "2013C",
+    "EventName": "PM_MRK_FX_LSU_FIN",
+    "BriefDescription": "The marked instruction was simple fixed point that was issued to the store unit.  Measured at finish time"
+  },
+  {
+    "EventCode": "2405A",
+    "EventName": "PM_NTC_FIN",
+    "BriefDescription": "Cycles in which the oldest instruction in the pipeline (NTC) finishes. Note that instructions can finish out of order, therefore not all the instructions that finish have a Next-to-complete status."
+  },
+  {
+    "EventCode": "20066",
+    "EventName": "PM_DISP_HELD_OTHER_CYC",
+    "BriefDescription": "PM_DISP_HELD_OTHER_CYC"
+  },
+  {
+    "EventCode": "201E2",
+    "EventName": "PM_MRK_LD_MISS_L1",
+    "BriefDescription": "Marked DL1 Demand Miss counted at finish time"
+  },
+  {
+    "EventCode": "200F4",
+    "EventName": "PM_RUN_CYC",
+    "BriefDescription": "Run_cycles"
+  },
+  {
+    "EventCode": "200F8",
+    "EventName": "PM_EXT_INT",
+    "BriefDescription": "external interrupt"
+  },
+  {
+    "EventCode": "30004",
+    "EventName": "PM_DISP_STALL_FLUSH",
+    "BriefDescription": "Cycles in which there were no instructions to dispatch because of a flush that happened to an instruction(s) that was not yet NTF.  PM_EXEC_STALL_NTC_FLUSH only includes instructions that were flushed after becoming NTF"
+  },
+  {
+    "EventCode": "30008",
+    "EventName": "PM_EXEC_STALL",
+    "BriefDescription": "Number of cycles when the oldest instruction in the pipeline is waiting to be finished in one of the execution units (BRU, LSU, VSU).  Only cycles between issue and finish are counted in this category."
+  },
+  {
+    "EventCode": "3001A",
+    "EventName": "PM_LSU_ST2_FIN",
+    "BriefDescription": "LSU Finished a PPC instruction in ST2 port"
+  },
+  {
+    "EventCode": "30020",
+    "EventName": "PM_PMC2_REWIND",
+    "BriefDescription": "PMC2 Rewind Event (did not match condition)"
+  },
+  {
+    "EventCode": "30022",
+    "EventName": "PM_PMC4_SAVED",
+    "BriefDescription": "PMC4 Rewind Value saved (matched condition)"
+  },
+  {
+    "EventCode": "30024",
+    "EventName": "PM_PMC6_OVERFLOW",
+    "BriefDescription": "Overflow from counter 6"
+  },
+  {
+    "EventCode": "30036",
+    "EventName": "PM_EXEC_STALL_SIMPLE_FX",
+    "BriefDescription": "The oldest instruction in the pipeline is executing a simple fixed point instruction in the Load Store Unit"
+  },
+  {
+    "EventCode": "3003A",
+    "EventName": "PM_CMPL_STALL_EXCEPTION",
+    "BriefDescription": "Cycles in which the NTC instruction is not allowed to complete because it was interrupted by ANY exception, which has to be serviced before the instruction can complete"
+  },
+  {
+    "EventCode": "3F042",
+    "EventName": "PM_HOT_LOCK_COLLISION",
+    "BriefDescription": "A thread [x] larx is sent to the L1 miss pipe to generate a request to the L2.  However, the thread [x] larx is blocked because a thread [y] larx stcx sequence to the same cacheline is already in progress. The thread [x] larx will be sent once the thread [y] stcx has drained to the L2.  This collision pulses once for the detection descrined above and is meant as a count event.  "
+  },
+  {
+    "EventCode": "3F044",
+    "EventName": "PM_VSU2_ISSUE",
+    "BriefDescription": "VSU instruction was issued to VSU pipe 2"
+  },
+  {
+    "EventCode": "30050",
+    "EventName": "PM_GRP_PUMP_MPRED_RTY",
+    "BriefDescription": "Final Pump Scope (group) ended up larger than Initial Pump Scope (chip).  Includes instruction and data lines"
+  },
+  {
+    "EventCode": "30058",
+    "EventName": "PM_TLBIE_FIN",
+    "BriefDescription": "Number of TLBIE instructions that finished in the LSU.  Two TLBIEs can finish each cycle.  All will be counted"
+  },
+  {
+    "EventCode": "3D058",
+    "EventName": "PM_SCALAR_FSQRT_FDIV_ISSUE",
+    "BriefDescription": "Scalar versions of four flops operations fdiv,fsqrt (xvdivdp, xvdivsp, xvsqrtdp, xvsqrtsp)"
+  },
+  {
+    "EventCode": "30066",
+    "EventName": "PM_LSU_FIN",
+    "BriefDescription": "LSU Finished a PPC instruction (up to 4 per cycle)"
+  },
+  {
+    "EventCode": "40004",
+    "EventName": "PM_FXU_ISSUE",
+    "BriefDescription": "The VSU was issued a fixed point instruction. Instructions that finish may not necessary complete."
+  },
+  {
+    "EventCode": "40008",
+    "EventName": "PM_NTC_ALL_FIN",
+    "BriefDescription": "Number of cycles in which both instructions in the ICT entry pair show as finished.  These are the cycles between finish and completion for the oldest pair of instructions in the pipeline"
+  },
+  {
+    "EventCode": "40010",
+    "EventName": "PM_PMC3_OVERFLOW",
+    "BriefDescription": "Overflow from counter 3"
+  },
+  {
+    "EventCode": "4C012",
+    "EventName": "PM_EXEC_STALL_DERAT_ONLY_MISS",
+    "BriefDescription": "Finish stall because the NTF instruction was a load or store that suffered a translation miss"
+  },
+  {
+    "EventCode": "4C018",
+    "EventName": "PM_CMPL_STALL",
+    "BriefDescription": "Completion Stalled because the thread was blocked"
+  },
+  {
+    "EventCode": "4C01E",
+    "EventName": "PM_LSU_ST3_FIN",
+    "BriefDescription": "LSU Finished a PPC instruction in ST3 port"
+  },
+  {
+    "EventCode": "4D018",
+    "EventName": "PM_EXEC_STALL_BRU",
+    "BriefDescription": "The oldest instruction in the pipeline is executing in the Branch unit"
+  },
+  {
+    "EventCode": "4D01A",
+    "EventName": "PM_CMPL_STALL_HWSYNC",
+    "BriefDescription": "Finish stall because the NTF instruction was a hwsync waiting for response from L2"
+  },
+  {
+    "EventCode": "4D01C",
+    "EventName": "PM_EXEC_STALL_TLBIEL",
+    "BriefDescription": "The oldest instruction in the pipeline is executing a TLBIEL instruction.  TLBIEL instructions have lower overhead than TLBIE instructions because they don't get set to the nest."
+  },
+  {
+    "EventCode": "4D020",
+    "EventName": "PM_VSU3_ISSUE",
+    "BriefDescription": "VSU instruction was issued to VSU pipe 3"
+  },
+  {
+    "EventCode": "40132",
+    "EventName": "PM_MRK_LSU_FIN",
+    "BriefDescription": "lsu marked instr PPC finish"
+  },
+  {
+    "EventCode": "4D04E",
+    "EventName": "PM_VECTOR_FSQRT_FDIV_ISSUE",
+    "BriefDescription": "vector versions of fdiv,fsqrt (fdiv,fdiv_rc,fdivs,fdivs_rc,fsqrt,fsqrt_rc,fsqrts,fsqrts_rc)"
+  },
+  {
+    "EventCode": "40152",
+    "EventName": "PM_MRK_PUMP_MPRED",
+    "BriefDescription": "Pump misprediction. Counts across all types of pumps for all data types excluding data prefetch (demand load,inst prefetch,inst fetch,xlate)"
+  },
+  {
+    "EventCode": "40156",
+    "EventName": "PM_MRK_GRP_PUMP_MPRED_RTY",
+    "BriefDescription": "Final Pump Scope (group) ended up larger than Initial Pump Scope (chip).  Includes instruction and data lines"
+  },
+  {
+    "EventCode": "45058",
+    "EventName": "PM_IC_MISS_CMPL",
+    "BriefDescription": "Non-speculative icache miss, counted at completion"
+  },
+  {
+    "EventCode": "4C058",
+    "EventName": "PM_MEM_CO",
+    "BriefDescription": "Memory castouts from this thread.  Data only"
+  },
+  {
+    "EventCode": "4D050",
+    "EventName": "PM_VSU_NON_FLOP_CMPL",
+    "BriefDescription": "Non FLOP operation completed"
+  },
+  {
+    "EventCode": "4D052",
+    "EventName": "PM_2FLOP_CMPL",
+    "BriefDescription": "DP vector version of fmul, fsub, fcmp, fsel, fabs, fnabs, fres ,fsqrte, fneg "
+  },
+  {
+    "EventCode": "401EC",
+    "EventName": "PM_THRESH_EXC_2048",
+    "BriefDescription": "Threshold counter exceeded a value of 2048"
+  },
+  {
+    "EventCode": "400F2",
+    "EventName": "PM_1PLUS_PPC_DISP",
+    "BriefDescription": "Cycles at least one Instr Dispatched"
+  },
+  {
+    "EventCode": "400F8",
+    "EventName": "PM_FLUSH",
+    "BriefDescription": "Flush (any type)"
+  }
+]

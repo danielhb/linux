@@ -1,0 +1,12 @@
+[
+  {
+    "EventCode": "1E058",
+    "EventName": "PM_STCX_FAIL_FIN",
+    "BriefDescription": "stcx failed"
+  },
+  {
+    "EventCode": "4E050",
+    "EventName": "PM_STCX_PASS_FIN",
+    "BriefDescription": "A stcx instruction finished in LSU with a passing status"
+  }
+]

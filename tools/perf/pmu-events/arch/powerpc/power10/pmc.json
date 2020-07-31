@@ -1,0 +1,47 @@
+[
+  {
+    "EventCode": "1C14A",
+    "EventName": "PM_MRK_SYS_PUMP_MPRED_RTY",
+    "BriefDescription": "Final Pump Scope (system) ended up larger than Initial Pump Scope (Chip/Group) for all data types excluding data prefetch (demand load,inst prefetch,inst fetch,xlate)"
+  },
+  {
+    "EventCode": "10060",
+    "EventName": "PM_TM_TRANS_RUN_CYC",
+    "BriefDescription": "run cycles in transactional state"
+  },
+  {
+    "EventCode": "3000C",
+    "EventName": "PM_FREQ_DOWN",
+    "BriefDescription": "Power Management: Below Threshold B"
+  },
+  {
+    "EventCode": "301E8",
+    "EventName": "PM_THRESH_EXC_64",
+    "BriefDescription": "Threshold counter exceeded a value of 64"
+  },
+  {
+    "EventCode": "40118",
+    "EventName": "PM_MRK_DCACHE_RELOAD_INTV",
+    "BriefDescription": "The marked instruction reloaded data from any of the caches on the system excluding the local caches.   When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "40050",
+    "EventName": "PM_SYS_PUMP_MPRED_RTY",
+    "BriefDescription": "Final Pump Scope (system) ended up larger than Initial Pump Scope (Chip/Group) for all data types excluding data prefetch (demand load,inst prefetch,inst fetch,xlate)"
+  },
+  {
+    "EventCode": "45050",
+    "EventName": "PM_1FLOP_CMPL",
+    "BriefDescription": "one flop (fadd, fmul, fsub, fcmp, fsel, fabs, fnabs, fres, fsqrte, fneg) operation completed"
+  },
+  {
+    "EventCode": "45052",
+    "EventName": "PM_4FLOP_CMPL",
+    "BriefDescription": "4 FLOP instruction completed"
+  },
+  {
+    "EventCode": "4D054",
+    "EventName": "PM_8FLOP_CMPL",
+    "BriefDescription": "8 FLOP instruction completed"
+  }
+]

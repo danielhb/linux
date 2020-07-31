@@ -1,0 +1,212 @@
+[
+  {
+    "EventCode": "1002C",
+    "EventName": "PM_LD_PREFETCH_CACHE_LINE_MISS",
+    "BriefDescription": "The L1 cache was reloaded with a line that fulffills a prefetch request"
+  },
+  {
+    "EventCode": "10132",
+    "EventName": "PM_MRK_INST_ISSUED",
+    "BriefDescription": "Marked instruction issued.  Note that stores always get issued twice, the address gets issued to the LSU and the data gets issued to the VSU.  Also, issues can sometimes get killed/cancelled and cause multiple sequential issues for the same instruction."
+  },
+  {
+    "EventCode": "1F05A",
+    "EventName": "PM_DISP_HELD_SYNC_CYC",
+    "BriefDescription": "PM_DISP_HELD_SYNC_CYC"
+  },
+  {
+    "EventCode": "101E0",
+    "EventName": "PM_MRK_INST_DISP",
+    "BriefDescription": "The thread has dispatched a randomly sampled marked instruction"
+  },
+  {
+    "EventCode": "101E2",
+    "EventName": "PM_MRK_BR_TAKEN_CMPL",
+    "BriefDescription": "Marked Branch Taken completed"
+  },
+  {
+    "EventCode": "20112",
+    "EventName": "PM_MRK_NTF_FIN",
+    "BriefDescription": "The marked instruction became the oldest in the pipeline before it finished.  It excludes instructions that finish at dispatch"
+  },
+  {
+    "EventCode": "2C01C",
+    "EventName": "PM_EXEC_STALL_DMISS_OFF_CHIP",
+    "BriefDescription": "Cycles in which the oldest instruction in the pipeline was waiting for a load miss to resolve from a remote chip (cache, L4, memory or CAPP) in the same group"
+  },
+  {
+    "EventCode": "20138",
+    "EventName": "PM_MRK_ST_NEST",
+    "BriefDescription": "A store has been sampled/marked and is at the point in execution where it has completed in the core and can no longer be flushed.  At this point the store is sent to the L2."
+  },
+  {
+    "EventCode": "2013A",
+    "EventName": "PM_MRK_BRU_FIN",
+    "BriefDescription": "bru marked instr finish"
+  },
+  {
+    "EventCode": "2C144",
+    "EventName": "PM_MRK_XFER_FROM_SRC_CYC_PMC2",
+    "BriefDescription": "The processor's data cache was reloaded with Modified (M) data from another core's L3 on the same chip due to a demand load"
+  },
+  {
+    "EventCode": "24156",
+    "EventName": "PM_MRK_STCX_FIN",
+    "BriefDescription": "Number of marked stcx instructions finished. This includes instructions in the speculative path of a branch that may be flushed"
+  },
+  {
+    "EventCode": "24158",
+    "EventName": "PM_MRK_INST",
+    "BriefDescription": "An instruction was marked. Includes both Random Instruction Sampling (RIS) at decode time and Random Event Sampling (RES) at the time the configured event happens"
+  },
+  {
+    "EventCode": "2415C",
+    "EventName": "PM_MRK_BR_CMPL",
+    "BriefDescription": "A marked branch completed.  All branches are included."
+  },
+  {
+    "EventCode": "2C058",
+    "EventName": "PM_MEM_PREF",
+    "BriefDescription": "Memory prefetch for this thread. Includes L4. Includes instruction and data"
+  },
+  {
+    "EventCode": "200FD",
+    "EventName": "PM_L1_ICACHE_MISS",
+    "BriefDescription": "Demand iCache Miss"
+  },
+  {
+    "EventCode": "30028",
+    "EventName": "PM_CMPL_STALL_MEM_ECC",
+    "BriefDescription": "Finish stall while waiting for the non-speculative finish of either a stcx waiting for its result or a load waiting for non-critical sectors of data and ECC"
+  },
+  {
+    "EventCode": "3012C",
+    "EventName": "PM_MRK_ST_FWD",
+    "BriefDescription": "Marked st forwards"
+  },
+  {
+    "EventCode": "30130",
+    "EventName": "PM_MRK_INST_FIN",
+    "BriefDescription": "marked instruction finished.  Excludes instructions that finish at dispatch.  Note that stores always finish twice since the address gets issued to the LSU and the data gets issued to the VSU."
+  },
+  {
+    "EventCode": "34146",
+    "EventName": "PM_MRK_LD_CMPL",
+    "BriefDescription": "PM_MRK_LD_CMPL"
+  },
+  {
+    "EventCode": "34149",
+    "EventName": "PM_MRK_STORE_DATA",
+    "BriefDescription": "Number of times a marked instruction was waiting for data.  This event uses edge detection."
+  },
+  {
+    "EventCode": "3C14C",
+    "EventName": "PM_MRK_DATA_SYS_PUMP_MPRED_RTY",
+    "BriefDescription": "Final Pump Scope (system) ended up larger than Initial Pump Scope (Chip/Group) for a demand load"
+  },
+  {
+    "EventCode": "3C050",
+    "EventName": "PM_DATA_SYS_PUMP_CPRED",
+    "BriefDescription": "Initial and Final Pump Scope was system pump (prediction=correct) for a demand load"
+  },
+  {
+    "EventCode": "3C052",
+    "EventName": "PM_DATA_SYS_PUMP_MPRED_TOO_BIG",
+    "BriefDescription": "Final Pump Scope (system) mispredicted. Either the original scope was too small (Chip/Group) or the original scope was System and it should have been smaller. Counts for a demand load"
+  },
+  {
+    "EventCode": "3E158",
+    "EventName": "PM_MRK_STCX_FAIL",
+    "BriefDescription": "The marked instruction was a stcx that failed.  Reported at finish time"
+  },
+  {
+    "EventCode": "3E15A",
+    "EventName": "PM_MRK_ST_FIN",
+    "BriefDescription": "The marked instruction was a store of any kind."
+  },
+  {
+    "EventCode": "30068",
+    "EventName": "PM_L1_ICACHE_RELOADED_PREF",
+    "BriefDescription": "Counts all Icache prefetch reloads ( includes demand turned into prefetch)"
+  },
+  {
+    "EventCode": "301E4",
+    "EventName": "PM_MRK_BR_MPRED_CMPL",
+    "BriefDescription": "Marked Branch Mispredicted.  Includes directon and target"
+  },
+  {
+    "EventCode": "300F6",
+    "EventName": "PM_LD_DEMAND_MISS_L1",
+    "BriefDescription": "The L1 cache was reloaded with a line that fulffills a demand miss request.  Counted at reload time, before finish."
+  },
+  {
+    "EventCode": "300FE",
+    "EventName": "PM_DATA_FROM_L3MISS",
+    "BriefDescription": "Demand LD - L3 Miss (not L2 hit and not L3 hit)"
+  },
+  {
+    "EventCode": "4000C",
+    "EventName": "PM_FREQ_UP",
+    "BriefDescription": "Power Management: Above Threshold A"
+  },
+  {
+    "EventCode": "4010E",
+    "EventName": "PM_MRK_TLBIE_FIN",
+    "BriefDescription": "Marked Tlbie instructions finished.  Includes tlbie and tlbiel instructions"
+  },
+  {
+    "EventCode": "40012",
+    "EventName": "PM_L1_ICACHE_RELOADED_ALL",
+    "BriefDescription": "Counts all Icache reloads includes demand, prefetch, prefetch turned into demand and demand turned into prefetch"
+  },
+  {
+    "EventCode": "40134",
+    "EventName": "PM_MRK_INST_TIMEO",
+    "BriefDescription": "marked Instruction finish timeout (instruction lost)"
+  },
+  {
+    "EventCode": "40136",
+    "EventName": "PM_MRK_STORE_DATA_CYC",
+    "BriefDescription": "Number of cycles in which the marked instruction was waiting for data.  Divide by PM_MRK_STORE_DATA to obtain the average Store data latency."
+  },
+  {
+    "EventCode": "4003C",
+    "EventName": "PM_DISP_STALL_HELD_SYNC_CYC",
+    "BriefDescription": "Cycles in which dispatch is held because of a synchronizing instruction that requires the ICT to be empty before dispatch"
+  },
+  {
+    "EventCode": "4505A",
+    "EventName": "PM_SP_FLOP_CMPL",
+    "BriefDescription": "SP floating point instruction completed"
+  },
+  {
+    "EventCode": "4C050",
+    "EventName": "PM_DATA_SYS_PUMP_MPRED_RTY",
+    "BriefDescription": "Final Pump Scope (system) ended up larger than Initial Pump Scope (Chip/Group) for a demand load"
+  },
+  {
+    "EventCode": "4D058",
+    "EventName": "PM_VECTOR_FLOP_CMPL",
+    "BriefDescription": "Vector FP instruction completed"
+  },
+  {
+    "EventCode": "4D05A",
+    "EventName": "PM_NON_MATH_FLOP_CMPL",
+    "BriefDescription": "Non FLOP operation completed"
+  },
+  {
+    "EventCode": "401E0",
+    "EventName": "PM_MRK_INST_CMPL",
+    "BriefDescription": "marked instruction completed"
+  },
+  {
+    "EventCode": "400F4",
+    "EventName": "PM_RUN_PURR",
+    "BriefDescription": "Run_PURR"
+  },
+  {
+    "EventCode": "400FE",
+    "EventName": "PM_DATA_FROM_MEMORY",
+    "BriefDescription": "The processor's data cache was reloaded from a memory location including L4 from local remote or distant due to a demand load"
+  }
+]

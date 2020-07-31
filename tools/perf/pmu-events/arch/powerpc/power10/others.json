@@ -1,0 +1,512 @@
+[
+  {
+    "EventCode": "10016",
+    "EventName": "PM_VSU0_ISSUE",
+    "BriefDescription": "VSU instruction was issued to VSU pipe 0"
+  },
+  {
+    "EventCode": "1001C",
+    "EventName": "PM_ULTRAVISOR_INST_CMPL",
+    "BriefDescription": "PM_ULTRAVISOR_INST_CMPL"
+  },
+  {
+    "EventCode": "100F0",
+    "EventName": "PM_CYC",
+    "BriefDescription": "Processor cycles"
+  },
+  {
+    "EventCode": "10026",
+    "EventName": "PM_EXT_INT_EBB",
+    "BriefDescription": "External interrupt due to Event Based Branch.  This means the PMU interrupt is being handled by user code."
+  },
+  {
+    "EventCode": "1002A",
+    "EventName": "PM_PMC3_HELD_CYC",
+    "BriefDescription": "Number of cycles when the speculative counter for PMC3 is frozen"
+  },
+  {
+    "EventCode": "10134",
+    "EventName": "PM_MRK_ST_DONE_L2",
+    "BriefDescription": "marked store completed in L2 ( RC machine done)"
+  },
+  {
+    "EventCode": "1505E",
+    "EventName": "PM_LD_HIT_L1",
+    "BriefDescription": "Number of loads that finished without experiencing an L1 miss"
+  },
+  {
+    "EventCode": "1D156",
+    "EventName": "PM_MRK_LD_MISS_L1_CYC",
+    "BriefDescription": "Marked ld latency"
+  },
+  {
+    "EventCode": "1D05E",
+    "EventName": "PM_DISP_STALL_HELD_HALT_CYC",
+    "BriefDescription": "Dispatch held because of power management"
+  },
+  {
+    "EventCode": "1E054",
+    "EventName": "PM_EXEC_STALL_DMISS_L21_L31",
+    "BriefDescription": "Cycles in which the oldest instruction in the pipeline was waiting for a load miss to resolve from a neighbor chiplet's L2 or L3 in the same chip."
+  },
+  {
+    "EventCode": "1E05A",
+    "EventName": "PM_CMPL_STALL_LWSYNC",
+    "BriefDescription": "Cycles in which the NTC sync instruction is a lwsync waiting to be allowed to complete"
+  },
+  {
+    "EventCode": "1F056",
+    "EventName": "PM_DISP_SS0_2_INSTR_CYC",
+    "BriefDescription": "Cycles in which Superslice 0 dispatches either 1 or 2 instructions"
+  },
+  {
+    "EventCode": "1F15C",
+    "EventName": "PM_MRK_STCX_L2_CYC",
+    "BriefDescription": "Cycles spent in the nest portion of a marked Stcx instruction.  It starts counting when the operation starts to drain to the L2 and it stops counting when the instruction retires from the Instruction Completion Table (ICT) in the Instruction Sequencing Unit (ISU)"
+  },
+  {
+    "EventCode": "10066",
+    "EventName": "PM_ADJUNCT_CYC",
+    "BriefDescription": "PM_ADJUNCT_CYC"
+  },
+  {
+    "EventCode": "101E4",
+    "EventName": "PM_MRK_L1_ICACHE_MISS",
+    "BriefDescription": "sampled Instruction suffered an icache Miss"
+  },
+  {
+    "EventCode": "101EA",
+    "EventName": "PM_MRK_L1_RELOAD_VALID",
+    "BriefDescription": "Marked demand reload"
+  },
+  {
+    "EventCode": "100F4",
+    "EventName": "PM_FLOP_CMPL",
+    "BriefDescription": "Floating Point Operations Completed"
+  },
+  {
+    "EventCode": "100FA",
+    "EventName": "PM_RUN_LATCH_ANY_THREAD_CYC",
+    "BriefDescription": "Cycles in which at least one thread has the run latch set"
+  },
+  {
+    "EventCode": "100FC",
+    "EventName": "PM_LD_REF_L1",
+    "BriefDescription": "All L1 D cache load references counted at finish, gated by reject.  In P9 and earlier this event counted only cacheable loads but in P10 both cacheable and non-cacheable loads are included"
+  },
+  {
+    "EventCode": "20006",
+    "EventName": "PM_DISP_STALL_HELD_ISSQ_FULL_CYC",
+    "BriefDescription": "Dispatch held due to Issue q full. Includes issue queue and branch queue"
+  },
+  {
+    "EventCode": "20108",
+    "EventName": "PM_MRK_TLBIE_CYC",
+    "BriefDescription": "Latency of TLBIE instructions from the cycle they become NTF until they complete in the nest"
+  },
+  {
+    "EventCode": "2000C",
+    "EventName": "PM_RUN_LATCH_ALL_THREADS_CYC",
+    "BriefDescription": "Cycles in which all the threads have the run latch set"
+  },
+  {
+    "EventCode": "2E010",
+    "EventName": "PM_ADJUNCT_INST_CMPL",
+    "BriefDescription": "PM_ADJUNCT_INST_CMPL"
+  },
+  {
+    "EventCode": "2E014",
+    "EventName": "PM_STCX_FIN",
+    "BriefDescription": "Number of stcx instructions finished. This includes instructions in the speculative path of a branch that may be flushed"
+  },
+  {
+    "EventCode": "2E016",
+    "EventName": "PM_EXT_INT_HYP",
+    "BriefDescription": "External interrupt initiated by the Hypervisor"
+  },
+  {
+    "EventCode": "20130",
+    "EventName": "PM_MRK_INST_DECODED",
+    "BriefDescription": "An instruction was marked at decode time. Random Instruction Sampling (RIS) only"
+  },
+  {
+    "EventCode": "20132",
+    "EventName": "PM_MRK_DFU_ISSUE",
+    "BriefDescription": "The marked instruction was a decimal floating point op issued to the VSU.  Measured at issue time"
+  },
+  {
+    "EventCode": "20134",
+    "EventName": "PM_MRK_FXU_ISSUE",
+    "BriefDescription": "The marked instruction was a fixed point op issued to the VSU.  Measured at issue time"
+  },
+  {
+    "EventCode": "2504C",
+    "EventName": "PM_PMC4_HELD_CYC",
+    "BriefDescription": "Number of cycles when the speculative counter for PMC4 is frozen"
+  },
+  {
+    "EventCode": "2F04C",
+    "EventName": "PM_ICBI_FIN",
+    "BriefDescription": "PM_ICBI_FIN"
+  },
+  {
+    "EventCode": "2505C",
+    "EventName": "PM_VSU_ISSUE",
+    "BriefDescription": "VSU instruction was issued to one of the VSU pipes. Up to 4 per cycle.  Includes fixed point ops."
+  },
+  {
+    "EventCode": "2F054",
+    "EventName": "PM_DISP_SS1_2_INSTR_CYC",
+    "BriefDescription": "Cycles in which Superslice 1 dispatches either 1 or 2 instructions"
+  },
+  {
+    "EventCode": "2F056",
+    "EventName": "PM_DISP_SS1_4_INSTR_CYC",
+    "BriefDescription": "Cycles in which Superslice 1 dispatches either 3 or 4 instructions"
+  },
+  {
+    "EventCode": "20068",
+    "EventName": "PM_DISP_HELD_HALT_CYC",
+    "BriefDescription": "PM_DISP_HELD_HALT_CYC"
+  },
+  {
+    "EventCode": "2006C",
+    "EventName": "PM_RUN_CYC_SMT4_MODE",
+    "BriefDescription": "Cycles in which this thread's run latch is set and the core is in SMT4 mode"
+  },
+  {
+    "EventCode": "201E0",
+    "EventName": "PM_MRK_DATA_FROM_MEMORY",
+    "BriefDescription": "The processor's data cache was reloaded from a memory location including L4 (if applicable) from local remote or distant due to a marked load"
+  },
+  {
+    "EventCode": "201E4",
+    "EventName": "PM_MRK_DATA_FROM_L3MISS",
+    "BriefDescription": "The processor's data cache was reloaded from a location other than the local core's L3 due to a marked load"
+  },
+  {
+    "EventCode": "201E8",
+    "EventName": "PM_THRESH_EXC_512",
+    "BriefDescription": "Threshold counter exceeded a value of 512"
+  },
+  {
+    "EventCode": "200F2",
+    "EventName": "PM_INST_DISP",
+    "BriefDescription": "# PPC Dispatched"
+  },
+  {
+    "EventCode": "3000E",
+    "EventName": "PM_ST_REJECT_TIQ",
+    "BriefDescription": "TIQ reject for stores"
+  },
+  {
+    "EventCode": "30132",
+    "EventName": "PM_MRK_VSU_FIN",
+    "BriefDescription": "VSU marked instr finish.  Excludes simple FX instructions issued to LSU"
+  },
+  {
+    "EventCode": "30134",
+    "EventName": "PM_MRK_ST_CMPL_INT",
+    "BriefDescription": "marked store finished with intervention"
+  },
+  {
+    "EventCode": "30038",
+    "EventName": "PM_EXEC_STALL_DMISS_LMEM",
+    "BriefDescription": "Cycles in which the oldest instruction in the pipeline was waiting for a load miss to resolve from local memory, L4 or OpenCapp chip"
+  },
+  {
+    "EventCode": "34042",
+    "EventName": "PM_HPT_TLB_PARENT_HIT_CHILD_MISS",
+    "BriefDescription": "Hierarchical TLB found parent entry but child entry was not found in the TLB.  2-level TLB, second level miss"
+  },
+  {
+    "EventCode": "3C04E",
+    "EventName": "PM_PMC1_HELD_CYC",
+    "BriefDescription": "Number of cycles when the speculative counter for PMC1 is frozen"
+  },
+  {
+    "EventCode": "3F04A",
+    "EventName": "PM_LSU_ST5_FIN",
+    "BriefDescription": "LSU Finished a PPC instruction in ST2 port"
+  },
+  {
+    "EventCode": "30052",
+    "EventName": "PM_SYS_PUMP_MPRED_TOO_BIG",
+    "BriefDescription": "PM_SYS_PUMP_MPRED_TOO_BIG"
+  },
+  {
+    "EventCode": "3015C",
+    "EventName": "PM_MRK_PTESYNC_CYC",
+    "BriefDescription": "Ptesync latency from the cycle the instruction becomes NTC until it completes in the nest"
+  },
+  {
+    "EventCode": "34054",
+    "EventName": "PM_EXEC_STALL_DMISS_L2L3_NOCONFLICT",
+    "BriefDescription": "Cycles in which the oldest instruction in the pipeline was waiting for a load miss to resolve from either the local L2 or local L3, without an RC dispatch conflict"
+  },
+  {
+    "EventCode": "3405A",
+    "EventName": "PM_PRIVILEGED_INST_CMPL",
+    "BriefDescription": "PM_PRIVILEGED_INST_CMPL"
+  },
+  {
+    "EventCode": "3C05E",
+    "EventName": "PM_MEM_RWITM",
+    "BriefDescription": "Memory Read With Intent to Modify for this thread.  "
+  },
+  {
+    "EventCode": "3D15E",
+    "EventName": "PM_MULT_MRK",
+    "BriefDescription": "mult marked instr"
+  },
+  {
+    "EventCode": "3E050",
+    "EventName": "PM_EXT_INT_OS",
+    "BriefDescription": "External interrupt initiated by the OS"
+  },
+  {
+    "EventCode": "3F150",
+    "EventName": "PM_MRK_ST_DRAIN_CYC",
+    "BriefDescription": "cycles to drain st from core to L2"
+  },
+  {
+    "EventCode": "3F054",
+    "EventName": "PM_DISP_SS0_4_INSTR_CYC",
+    "BriefDescription": "Cycles in which Superslice 0 dispatches either 3 or 4 instructions"
+  },
+  {
+    "EventCode": "3F056",
+    "EventName": "PM_DISP_SS0_8_INSTR_CYC",
+    "BriefDescription": "Cycles in which Superslice 0 dispatches either 5, 6, 7 or 8 instructions"
+  },
+  {
+    "EventCode": "3F05E",
+    "EventName": "PM_DISP_HELD_ISSQ_FULL_CYC",
+    "BriefDescription": "PM_DISP_HELD_ISSQ_FULL_CYC"
+  },
+  {
+    "EventCode": "30162",
+    "EventName": "PM_MRK_ISSUE_DEPENDENT_LOAD",
+    "BriefDescription": "The marked instruction was dependent on a load.  It is eligible for issue kill"
+  },
+  {
+    "EventCode": "300F8",
+    "EventName": "PM_TB_BIT_TRANS",
+    "BriefDescription": "timebase event"
+  },
+  {
+    "EventCode": "4000A",
+    "EventName": "PM_DEBUG_TRIGGER",
+    "BriefDescription": "counts a trigger generated from the debug logic for lab use"
+  },
+  {
+    "EventCode": "40114",
+    "EventName": "PM_MRK_START_PROBE_NOP_DISP",
+    "BriefDescription": "Marked Start probe nop dispatched.  Instruction AND R0,R0,R0"
+  },
+  {
+    "EventCode": "4001A",
+    "EventName": "PM_SMT_MODE_SWITCH",
+    "BriefDescription": "PM_SMT_MODE_SWITCH"
+  },
+  {
+    "EventCode": "4001C",
+    "EventName": "PM_VSU_FIN",
+    "BriefDescription": "PM_VSU_FIN"
+  },
+  {
+    "EventCode": "4C01A",
+    "EventName": "PM_EXEC_STALL_DMISS_OFF_NODE",
+    "BriefDescription": "Cycles in which the oldest instruction in the pipeline was waiting for a load miss to resolve from a distant chip (cache, L4, memory or CAPP chip)"
+  },
+  {
+    "EventCode": "4C01C",
+    "EventName": "PM_INT_DOORBELL",
+    "BriefDescription": "Internal doorbell interrupt"
+  },
+  {
+    "EventCode": "4D012",
+    "EventName": "PM_PMC3_SAVED",
+    "BriefDescription": "PMC3 Rewind Value saved"
+  },
+  {
+    "EventCode": "4D022",
+    "EventName": "PM_HYPERVISOR_INST_CMPL",
+    "BriefDescription": "PM_HYPERVISOR_INST_CMPL"
+  },
+  {
+    "EventCode": "4D024",
+    "EventName": "PM_PROBLEM_INST_CMPL",
+    "BriefDescription": "PM_PROBLEM_INST_CMPL"
+  },
+  {
+    "EventCode": "4D026",
+    "EventName": "PM_ULTRAVISOR_CYC",
+    "BriefDescription": "Cycles in which the thread is in Ultravisor state.  MSR[S HV PR]=110"
+  },
+  {
+    "EventCode": "4D028",
+    "EventName": "PM_PRIVILEGED_CYC",
+    "BriefDescription": "Cycles in which the thread is in Privileged state.  MSR[S HV PR]=x00"
+  },
+  {
+    "EventCode": "40030",
+    "EventName": "PM_INST_FIN",
+    "BriefDescription": "Instructions finished"
+  },
+  {
+    "EventCode": "44040",
+    "EventName": "PM_L2_PWC_HIT",
+    "BriefDescription": "PM_L2_PWC_HIT"
+  },
+  {
+    "EventCode": "44042",
+    "EventName": "PM_L3_PWC_HIT",
+    "BriefDescription": "PM_L3_PWC_HIT"
+  },
+  {
+    "EventCode": "44146",
+    "EventName": "PM_MRK_STCX_CORE_CYC",
+    "BriefDescription": "Cycles spent in the core portion of a marked Stcx instruction.  It starts counting when the instruction is decoded and stops counting when it drains into the L2"
+  },
+  {
+    "EventCode": "4C04A",
+    "EventName": "PM_PMC2_HELD_CYC",
+    "BriefDescription": "Number of cycles when the speculative counter for PMC1 is frozen"
+  },
+  {
+    "EventCode": "4E040",
+    "EventName": "PM_SP_MMA_CMPL",
+    "BriefDescription": "MMA single precision instruction completed"
+  },
+  {
+    "EventCode": "4E042",
+    "EventName": "PM_DP_MMA_CMPL",
+    "BriefDescription": "MMA double precision instruction completed"
+  },
+  {
+    "EventCode": "4E044",
+    "EventName": "PM_HP_MMA_CMPL",
+    "BriefDescription": "MMA half precision instruction completed"
+  },
+  {
+    "EventCode": "4E046",
+    "EventName": "PM_4INT_MMA_CMPL",
+    "BriefDescription": "Counts once for either multiply only or multiply-add.  Counts instructions, not FLOPS"
+  },
+  {
+    "EventCode": "4E048",
+    "EventName": "PM_8INT_MMA_CMPL",
+    "BriefDescription": "Counts once for either multiply only or multiply-add.  Counts instructions, not FLOPS"
+  },
+  {
+    "EventCode": "4E04A",
+    "EventName": "PM_16INT_MMA_CMPL",
+    "BriefDescription": "Counts once for either multiply only or multiply-add.  Counts instructions, not FLOPS"
+  },
+  {
+    "EventCode": "4E04C",
+    "EventName": "PM_BF16_MMA_CMPL",
+    "BriefDescription": "Counts once for either multiply only or multiply-add.  Counts instructions, not FLOPS"
+  },
+  {
+    "EventCode": "4E04E",
+    "EventName": "PM_MOVE_TO_MMA_CMPL",
+    "BriefDescription": "Move to VSR.  mfacc and setaccz.  Implies priming"
+  },
+  {
+    "EventCode": "4F040",
+    "EventName": "PM_MOVE_FROM_MMA_CMPL",
+    "BriefDescription": "Move from VSR.  Mfacc"
+  },
+  {
+    "EventCode": "4F042",
+    "EventName": "PM_MUL_MMA_CMPL",
+    "BriefDescription": "Counts all MMA instructions that are multiply only.  This implies priming"
+  },
+  {
+    "EventCode": "40154",
+    "EventName": "PM_MRK_FAB_RSP_BKILL",
+    "BriefDescription": "Marked store had to do a bkill"
+  },
+  {
+    "EventCode": "44054",
+    "EventName": "PM_VECTOR_LD_CMPL",
+    "BriefDescription": "Number of vector load instructions completed"
+  },
+  {
+    "EventCode": "44058",
+    "EventName": "PM_LWSYNC_CMPL",
+    "BriefDescription": "lwsync instruction completed"
+  },
+  {
+    "EventCode": "4405A",
+    "EventName": "PM_HWSYNC_CMPL",
+    "BriefDescription": "hwsync instruction completed"
+  },
+  {
+    "EventCode": "4405E",
+    "EventName": "PM_ANY_FLOP_CMPL",
+    "BriefDescription": "A floating point instruction of any type completed.  It counts once for each 1, 2, 4 or 8 flop instruction.  Use PM_1|2|4|8_FLOP_CMPL events to count flops"
+  },
+  {
+    "EventCode": "45054",
+    "EventName": "PM_FMA_CMPL",
+    "BriefDescription": "two flops operation completed (fmadd, fnmadd, fmsub, fnmsub) Scalar instructions only. "
+  },
+  {
+    "EventCode": "45056",
+    "EventName": "PM_SCALAR_FLOP_CMPL",
+    "BriefDescription": "Scalar flop operation completed"
+  },
+  {
+    "EventCode": "4505C",
+    "EventName": "PM_MATH_FLOP_CMPL",
+    "BriefDescription": "Math flop instruction completed"
+  },
+  {
+    "EventCode": "4D05E",
+    "EventName": "PM_BR_CMPL",
+    "BriefDescription": "Any Branch instruction completed"
+  },
+  {
+    "EventCode": "4E056",
+    "EventName": "PM_BACK_BRANCH_CMPL",
+    "BriefDescription": "Branch whose target address is lower than the program counter"
+  },
+  {
+    "EventCode": "4E058",
+    "EventName": "PM_BR_COND_CMPL",
+    "BriefDescription": "Conditional branch completed"
+  },
+  {
+    "EventCode": "4E05A",
+    "EventName": "PM_PREFIXED_CMPL",
+    "BriefDescription": "Prefixed instruction completed"
+  },
+  {
+    "EventCode": "4E15E",
+    "EventName": "PM_MRK_INST_FLUSHED",
+    "BriefDescription": "The marked instruction was flushed"
+  },
+  {
+    "EventCode": "4F056",
+    "EventName": "PM_DISP_SS1_8_INSTR_CYC",
+    "BriefDescription": "Cycles in which Superslice 0 dispatches either 5, 6, 7 or 8 instructions"
+  },
+  {
+    "EventCode": "401E6",
+    "EventName": "PM_MRK_INST_FROM_L3MISS",
+    "BriefDescription": "Marked instruction was reloaded from a location beyond the local chiplet"
+  },
+  {
+    "EventCode": "401E8",
+    "EventName": "PM_MRK_DATA_FROM_L2MISS",
+    "BriefDescription": "The processor's data cache was reloaded from a location other than the local core's L2 due to a marked load"
+  },
+  {
+    "EventCode": "400FA",
+    "EventName": "PM_RUN_INST_CMPL",
+    "BriefDescription": "Run_Instructions"
+  }
+]

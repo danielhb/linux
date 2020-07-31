@@ -1,0 +1,372 @@
+[
+  {
+    "EventCode": "10008",
+    "EventName": "PM_RUN_SPURR",
+    "BriefDescription": "Cycle in which the SPURR was enabled"
+  },
+  {
+    "EventCode": "1000A",
+    "EventName": "PM_PMC3_REWIND",
+    "BriefDescription": "PMC3 rewind event. A rewind happens when a speculative event (such as latency or CPI stack) is selected on PMC3 and the stall reason or reload source did not match the one programmed in PMC3. When this occurs, the count in PMC3 will not change."
+  },
+  {
+    "EventCode": "1C040",
+    "EventName": "PM_XFER_FROM_SRC_PMC1",
+    "BriefDescription": "The processor's L1 data cache was reloaded from the source specified in MMCR3[0:10]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+  },
+  {
+    "EventCode": "1C142",
+    "EventName": "PM_MRK_XFER_FROM_SRC_PMC1",
+    "BriefDescription": "For a marked data transfer instruction, the processor's L1 data cache was reloaded from the source specified in MMCR3[0:10]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+  },
+  {
+    "EventCode": "1C144",
+    "EventName": "PM_MRK_XFER_FROM_SRC_CYC_PMC1",
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[0:10].  Only reloads to satisfy a demand miss are included in this count "
+  },
+  {
+    "EventCode": "1C146",
+    "EventName": "PM_MRK_DATA_FLUSHED_FROM_SRC_PMC1",
+    "BriefDescription": "For a marked demand load that was later flushed, the processor's L1 data cache was reloaded from the source specified in MMCR3[0:10]"
+  },
+  {
+    "EventCode": "1C148",
+    "EventName": "PM_MRK_DATA_FLUSHED_FROM_SRC_CYC_PMC1",
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[0:10].  Only reloads to satisfy a demand miss that was later flushed are included in this count "
+  },
+  {
+    "EventCode": "1C050",
+    "EventName": "PM_DATA_CHIP_PUMP_CPRED",
+    "BriefDescription": "Initial and Final Pump Scope was chip pump (prediction=correct) for a demand load"
+  },
+  {
+    "EventCode": "1C052",
+    "EventName": "PM_DATA_GRP_PUMP_MPRED_RTY",
+    "BriefDescription": "Final Pump Scope (Group) ended up larger than Initial Pump Scope (Chip) for a demand load"
+  },
+  {
+    "EventCode": "1C054",
+    "EventName": "PM_DATA_PUMP_CPRED",
+    "BriefDescription": "Pump prediction correct. Counts across all types of pumps for a demand load"
+  },
+  {
+    "EventCode": "1C056",
+    "EventName": "PM_DERAT_MISS_4K",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 4K.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "1C058",
+    "EventName": "PM_DTLB_MISS_16G",
+    "BriefDescription": "Data TLB Miss page size 16G.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "1C05C",
+    "EventName": "PM_DTLB_MISS_2M",
+    "BriefDescription": "Data TLB reload (after a miss) page size 2M. Implies radix translation was used.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "1D15C",
+    "EventName": "PM_MRK_DTLB_MISS_1G",
+    "BriefDescription": "Marked Data TLB reload (after a miss) page size 1G. Implies radix translation was used.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "1E152",
+    "EventName": "PM_MRK_DERAT_MISS_16M",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 16M for a marked instruction.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "1E056",
+    "EventName": "PM_EXEC_STALL_STORE_PIPE",
+    "BriefDescription": "Cycles spent by the oldest instruction in the store unit outside of handling store misses or other special store operations"
+  },
+  {
+    "EventCode": "1E15E",
+    "EventName": "PM_MRK_L2_TM_REQ_ABORT",
+    "BriefDescription": "TM abort"
+  },
+  {
+    "EventCode": "1F150",
+    "EventName": "PM_MRK_ST_L2_CYC",
+    "BriefDescription": "cycles from L2 rc disp to l2 rc completion"
+  },
+  {
+    "EventCode": "1F152",
+    "EventName": "PM_MRK_FAB_RSP_BKILL_CYC",
+    "BriefDescription": "cycles L2 RC took for a bkill"
+  },
+  {
+    "EventCode": "10062",
+    "EventName": "PM_LD_L3MISS_PEND_CYC",
+    "BriefDescription": "Cycles L3 miss was pending for this thread"
+  },
+  {
+    "EventCode": "20010",
+    "EventName": "PM_PMC1_OVERFLOW",
+    "BriefDescription": "Overflow from counter 1"
+  },
+  {
+    "EventCode": "2001A",
+    "EventName": "PM_ITLB_HIT",
+    "BriefDescription": "Number of times the  PTE required to translate the instruction address was resident in the TLB (instruction TLB access).  Applies to both HPT and RPT"
+  },
+  {
+    "EventCode": "2D12C",
+    "EventName": "PM_MRK_DATA_GRP_PUMP_MPRED_RTY",
+    "BriefDescription": "Final Pump Scope (Group) ended up larger than Initial Pump Scope (Chip) for a demand load"
+  },
+  {
+    "EventCode": "2003E",
+    "EventName": "PM_PTESYNC_FIN",
+    "BriefDescription": "Ptesync instruction finished in the store unit.  Only one ptesync can finish at a time."
+  },
+  {
+    "EventCode": "2C040",
+    "EventName": "PM_XFER_FROM_SRC_PMC2",
+    "BriefDescription": "The processor's data cache was reloaded from local core's L2 hit without dispatch conflicts on Mepf state due to a demand load"
+  },
+  {
+    "EventCode": "2C146",
+    "EventName": "PM_MRK_DATA_FLUSHED_FROM_SRC_PMC2",
+    "BriefDescription": "For a marked demand load that was later flushed, the processor's L1 data cache was reloaded from the source specified in MMCR3[0:10]"
+  },
+  {
+    "EventCode": "2C148",
+    "EventName": "PM_MRK_DATA_FLUSHED_FROM_SRC_CYC_PMC2",
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[0:10].  Only reloads to satisfy a demand miss that was later flushed are included in this count "
+  },
+  {
+    "EventCode": "20052",
+    "EventName": "PM_GRP_PUMP_MPRED_TOO_BIG",
+    "BriefDescription": "A bus operation was sent as a system pump and group pump was the accurate scope.  The scope could have been smaller but no retry was needed.  Includes data, instruction and translation operations.  Set MMCR1[16] and MMCR1[17] to 0b11 to include instruction and data prefetch respectively."
+  },
+  {
+    "EventCode": "20058",
+    "EventName": "PM_LD_CACHE_INHIBITED",
+    "BriefDescription": "A data line was brought in from the nest to fulfill a request initiated by a non-cacheable load instruction.  The data will not be written to the L1"
+  },
+  {
+    "EventCode": "2C050",
+    "EventName": "PM_DATA_GRP_PUMP_CPRED",
+    "BriefDescription": "Initial and Final Pump Scope was group pump (prediction=correct) for a demand load"
+  },
+  {
+    "EventCode": "2C052",
+    "EventName": "PM_DATA_GRP_PUMP_MPRED_TOO_BIG",
+    "BriefDescription": "Final Pump Scope (Group) ended up either larger or smaller than Initial Pump Scope for a demand load"
+  },
+  {
+    "EventCode": "2C054",
+    "EventName": "PM_DERAT_MISS_64K",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 64K.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "2C056",
+    "EventName": "PM_DTLB_MISS_4K",
+    "BriefDescription": "Data TLB reload (after a miss) page size 4K.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "2C05A",
+    "EventName": "PM_DERAT_MISS_1G",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 1G. Implies radix translation.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "2D150",
+    "EventName": "PM_MRK_DERAT_MISS_4K",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 4K for a marked instruction.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "2D154",
+    "EventName": "PM_MRK_DERAT_MISS_64K",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 64K for a marked instruction.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "2D156",
+    "EventName": "PM_MRK_DTLB_MISS_16M",
+    "BriefDescription": "Marked Data TLB reload (after a miss) page size 16M. When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "2D15E",
+    "EventName": "PM_MRK_DTLB_MISS_16G",
+    "BriefDescription": "Marked Data TLB reload (after a miss) page size 16G. When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "2E05A",
+    "EventName": "PM_LD_REJECT_TIQ",
+    "BriefDescription": "Internal LSU reject from LRQ. Rejects cause the load to go back to LRQ, but it stays contained within the LSU once it gets issued. This event counts the number of times the LRQ attempts to relaunch an instruction after a reject. Any load can suffer multiple rejects"
+  },
+  {
+    "EventCode": "200F6",
+    "EventName": "PM_DERAT_MISS",
+    "BriefDescription": "DERAT Reloaded to satisfy a DERAT miss.  All page sizes are counted by this event.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "3000A",
+    "EventName": "PM_DISP_STALL_ITLB_MISS",
+    "BriefDescription": "Dispatch was stalled waiting to resolve an instruction TLB miss"
+  },
+  {
+    "EventCode": "30016",
+    "EventName": "PM_EXEC_STALL_DERAT_DTLB_MISS",
+    "BriefDescription": "The oldest instruction in the pipeline suffered a TLB miss."
+  },
+  {
+    "EventCode": "3012E",
+    "EventName": "PM_MRK_DTLB_MISS_2M",
+    "BriefDescription": "Marked Data TLB reload (after a miss) page size 2M, which implies Radix Page Table translation was used. When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "3013C",
+    "EventName": "PM_MRK_DTLB_MISS_4K",
+    "BriefDescription": "Marked Data TLB reload (after a miss) page size 4K. When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "34044",
+    "EventName": "PM_DERAT_MISS_PREF",
+    "BriefDescription": "DERAT miss (TLB access) while servicing a data prefetch."
+  },
+  {
+    "EventCode": "3C040",
+    "EventName": "PM_XFER_FROM_SRC_PMC3",
+    "BriefDescription": "The processor's L1 data cache was reloaded from the source specified in MMCR3[26:36]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+  },
+  {
+    "EventCode": "3C142",
+    "EventName": "PM_MRK_XFER_FROM_SRC_PMC3",
+    "BriefDescription": "For a marked data transfer instruction, the processor's L1 data cache was reloaded from the source specified in MMCR3[26:36]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+  },
+  {
+    "EventCode": "3C144",
+    "EventName": "PM_MRK_XFER_FROM_SRC_CYC_PMC3",
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[26:36].  Only reloads to satisfy a demand miss are included in this count "
+  },
+  {
+    "EventCode": "3C146",
+    "EventName": "PM_MRK_DATA_FLUSHED_FROM_SRC_PMC3",
+    "BriefDescription": "For a marked demand load that was later flushed, the processor's L1 data cache was reloaded from the source specified in MMCR3[0:10]"
+  },
+  {
+    "EventCode": "3C148",
+    "EventName": "PM_MRK_DATA_FLUSHED_FROM_SRC_CYC_PMC3",
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[0:10].  Only reloads to satisfy a demand miss that was later flushed are included in this count "
+  },
+  {
+    "EventCode": "3F04C",
+    "EventName": "PM_RADIX_RELOAD",
+    "BriefDescription": "PM_RADIX_RELOAD"
+  },
+  {
+    "EventCode": "3C054",
+    "EventName": "PM_DERAT_MISS_16M",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 16M.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "3C056",
+    "EventName": "PM_DTLB_MISS_64K",
+    "BriefDescription": "Data TLB reload (after a miss) page size 64K. When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "3C058",
+    "EventName": "PM_LARX_FIN",
+    "BriefDescription": "Larx finished"
+  },
+  {
+    "EventCode": "3D154",
+    "EventName": "PM_MRK_DERAT_MISS_16G",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 16G for a marked instruction.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "3006E",
+    "EventName": "PM_CONSTANT_CLK",
+    "BriefDescription": "This event increments at a rate of 64 MHz"
+  },
+  {
+    "EventCode": "301E2",
+    "EventName": "PM_MRK_ST_CMPL",
+    "BriefDescription": "Marked store completed and sent to nest.  Note that this count excludes cache-inhibited stores"
+  },
+  {
+    "EventCode": "301E6",
+    "EventName": "PM_MRK_DERAT_MISS",
+    "BriefDescription": "Marked Erat Miss (Data TLB Access) All page sizes.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "300FC",
+    "EventName": "PM_DTLB_MISS",
+    "BriefDescription": "The DPTEG required for the load/store instruction in execution was missing from the TLB.  It includes pages of all sizes for demand and prefetch activity"
+  },
+  {
+    "EventCode": "4D02C",
+    "EventName": "PM_PMC1_REWIND",
+    "BriefDescription": "PM_PMC1_REWIND"
+  },
+  {
+    "EventCode": "4003E",
+    "EventName": "PM_LD_CMPL",
+    "BriefDescription": "count of Loads completed"
+  },
+  {
+    "EventCode": "4C040",
+    "EventName": "PM_XFER_FROM_SRC_PMC4",
+    "BriefDescription": "The processor's L1 data cache was reloaded from the source specified in MMCR3[39:49]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+  },
+  {
+    "EventCode": "4C142",
+    "EventName": "PM_MRK_XFER_FROM_SRC_PMC4",
+    "BriefDescription": "For a marked data transfer instruction, the processor's L1 data cache was reloaded from the source specified in MMCR3[39:49]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+  },
+  {
+    "EventCode": "4C144",
+    "EventName": "PM_MRK_XFER_FROM_SRC_CYC_PMC4",
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[39:49].  Only reloads to satisfy a demand miss are included in this count "
+  },
+  {
+    "EventCode": "4C146",
+    "EventName": "PM_MRK_DATA_FLUSHED_FROM_SRC_PMC4",
+    "BriefDescription": "For a marked demand load that was later flushed, the processor's L1 data cache was reloaded from the source specified in MMCR3[0:10]"
+  },
+  {
+    "EventCode": "4C148",
+    "EventName": "PM_MRK_DATA_FLUSHED_FROM_SRC_CYC_PMC4",
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[0:10].  Only reloads to satisfy a demand miss that was later flushed are included in this count "
+  },
+  {
+    "EventCode": "4C054",
+    "EventName": "PM_DERAT_MISS_16G",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 16G.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "4C056",
+    "EventName": "PM_DTLB_MISS_16M",
+    "BriefDescription": "Data TLB reload (after a miss) page size 16M.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "4C05A",
+    "EventName": "PM_DTLB_MISS_1G",
+    "BriefDescription": "Data TLB reload (after a miss) page size 1G. Implies radix translation was used.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "4C15C",
+    "EventName": "PM_MRK_DERAT_MISS_1G",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 1G for a marked instruction.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "4C15E",
+    "EventName": "PM_MRK_DTLB_MISS_64K",
+    "BriefDescription": "Marked Data TLB reload (after a miss) page size 64K. When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "4D056",
+    "EventName": "PM_NON_FMA_FLOP_CMPL",
+    "BriefDescription": "Non FMA instruction completed"
+  },
+  {
+    "EventCode": "40164",
+    "EventName": "PM_MRK_DERAT_MISS_2M",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 2M for a marked instruction.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "401E4",
+    "EventName": "PM_MRK_DTLB_MISS",
+    "BriefDescription": "The DPTEG required for the marked load/store instruction in execution was missing from the TLB.  It includes pages of all sizes for demand and prefetch activity"
+  }
+]

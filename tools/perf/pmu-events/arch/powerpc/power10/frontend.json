@@ -1,0 +1,552 @@
+[
+  {
+    "EventCode": "10000",
+    "EventName": "PM_SUSPENDED",
+    "BriefDescription": "Counter OFF"
+  },
+  {
+    "EventCode": "10004",
+    "EventName": "PM_EXEC_STALL_TRANSLATION",
+    "BriefDescription": "Finish stall due to LRQ miscellaneous reasons, lost arbitration to LMQ slot, bank collisions, set prediction cleanup, set prediction multihit and others"
+  },
+  {
+    "EventCode": "10010",
+    "EventName": "PM_PMC4_OVERFLOW",
+    "BriefDescription": "Overflow from counter 4"
+  },
+  {
+    "EventCode": "10020",
+    "EventName": "PM_PMC4_REWIND",
+    "BriefDescription": "PMC4 Rewind Event"
+  },
+  {
+    "EventCode": "10038",
+    "EventName": "PM_DISP_STALL_TRANSLATION",
+    "BriefDescription": "Number of cycles in which instruction cannot be dispatched for this thread because the MMU is handling a translation miss."
+  },
+  {
+    "EventCode": "1003A",
+    "EventName": "PM_DISP_STALL_BR_MPRED_IC_L2",
+    "BriefDescription": "Dispatch was stalled while the instruction was fetched from the local L2 after suffering a branch mispredict.  The ICT was empty for the duration of this stall"
+  },
+  {
+    "EventCode": "1013E",
+    "EventName": "PM_MRK_LD_MISS_EXPOSED_CYC",
+    "BriefDescription": "Marked Load exposed Miss (use edge detect to count #)"
+  },
+  {
+    "EventCode": "1404E",
+    "EventName": "PM_INST_RADIX_L2_PTE_FROM_L2",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "15040",
+    "EventName": "PM_INST_RADIX_L2_PDE_FROM_L2",
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "15042",
+    "EventName": "PM_INST_RADIX_L3_PTE_FROM_L2",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "15044",
+    "EventName": "PM_INST_RADIX_L3_PDE_FROM_L2",
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "15046",
+    "EventName": "PM_INST_RADIX_L4_PTE_FROM_L2",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "1015E",
+    "EventName": "PM_MRK_FAB_RSP_RD_T_INTV",
+    "BriefDescription": "Sampled Read got a T intervention"
+  },
+  {
+    "EventCode": "14050",
+    "EventName": "PM_INST_CHIP_PUMP_CPRED",
+    "BriefDescription": "Initial and Final Pump Scope was chip pump (prediction=correct) for an instruction fetch"
+  },
+  {
+    "EventCode": "14052",
+    "EventName": "PM_INST_GRP_PUMP_MPRED_RTY",
+    "BriefDescription": "Final Pump Scope (Group) ended up larger than Initial Pump Scope (Chip) for an instruction fetch"
+  },
+  {
+    "EventCode": "14054",
+    "EventName": "PM_INST_PUMP_CPRED",
+    "BriefDescription": "Pump prediction correct. Counts across all types of pumps for an instruction fetch"
+  },
+  {
+    "EventCode": "1D050",
+    "EventName": "PM_DTLB_HIT_16G",
+    "BriefDescription": "Data TLB Miss page size 16G.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "1D052",
+    "EventName": "PM_IERAT_MISS_1G",
+    "BriefDescription": "IERAT Miss (Instruction TLB Access) page size 1G. Implies radix translation"
+  },
+  {
+    "EventCode": "1D054",
+    "EventName": "PM_DTLB_HIT_2M",
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 2M. Implies radix translation.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "1D058",
+    "EventName": "PM_ITLB_HIT_64K",
+    "BriefDescription": "Instruction TLB reload (after a miss) page size 64K.  It includes prefetch and demand activity"
+  },
+  {
+    "EventCode": "1E050",
+    "EventName": "PM_DISP_STALL_HELD_STF_MAPPER_CYC",
+    "BriefDescription": "Dispatch held because the STF mapper/SRB was full. Includes GPR (count, link, tar), VSR, VMR, FPR"
+  },
+  {
+    "EventCode": "1F054",
+    "EventName": "PM_DTLB_HIT",
+    "BriefDescription": "Number of times the  PTE required by the instruction was resident in the TLB (data TLB access). When MMCR1[16]=0 this event counts only demand hits.  When MMCR1[16]=1 this event includes demand and prefetch.  Applies to both HPT and RPT"
+  },
+  {
+    "EventCode": "1F058",
+    "EventName": "PM_DISP_HELD_CYC",
+    "BriefDescription": "PM_DISP_HELD_CYC"
+  },
+  {
+    "EventCode": "101E8",
+    "EventName": "PM_THRESH_EXC_256",
+    "BriefDescription": "Threshold counter exceed a count of 256"
+  },
+  {
+    "EventCode": "101EC",
+    "EventName": "PM_THRESH_MET",
+    "BriefDescription": "threshold exceeded"
+  },
+  {
+    "EventCode": "100F2",
+    "EventName": "PM_1PLUS_PPC_CMPL",
+    "BriefDescription": "Cycles in which at least one instruction is completed by this thread"
+  },
+  {
+    "EventCode": "100F6",
+    "EventName": "PM_IERAT_MISS",
+    "BriefDescription": "Number of I-ERAT reloads"
+  },
+  {
+    "EventCode": "100F8",
+    "EventName": "PM_DISP_STALL_CYC",
+    "BriefDescription": "Number of cycles the ICT has no itags assigned to this thread.  No instructions have beend dispatched for this thread"
+  },
+  {
+    "EventCode": "20114",
+    "EventName": "PM_MRK_L2_RC_DISP",
+    "BriefDescription": "Marked Instruction RC dispatched in L2"
+  },
+  {
+    "EventCode": "2C010",
+    "EventName": "PM_EXEC_STALL_LSU",
+    "BriefDescription": "The oldest instruction in the pipeline is executing in the Load Store Unit"
+  },
+  {
+    "EventCode": "2C016",
+    "EventName": "PM_DISP_STALL_IERAT_ONLY_MISS",
+    "BriefDescription": "Dispatch was stalled waiting to resolve an instruction ERAT miss"
+  },
+  {
+    "EventCode": "2C01E",
+    "EventName": "PM_DISP_STALL_BR_MPRED_IC_L3",
+    "BriefDescription": "Dispatch was stalled while the instruction was fetched from the local L3 after suffering a branch mispredict.  The ICT was empty for the duration of this stall"
+  },
+  {
+    "EventCode": "2D01A",
+    "EventName": "PM_DISP_STALL_IC_MISS",
+    "BriefDescription": "Ict empty for this thread due to Icache Miss"
+  },
+  {
+    "EventCode": "2D01C",
+    "EventName": "PM_CMPL_STALL_STCX",
+    "BriefDescription": "The oldest instruction in the pipeline is a stcx waiting for resolution from the nest.  The instruction finished in the Load Store Unit and is completion is being held until the nest responds to the request"
+  },
+  {
+    "EventCode": "2E018",
+    "EventName": "PM_DISP_STALL_FETCH",
+    "BriefDescription": "Cycles in which there was nothing in the pipeline for this thread because Fetch was being held"
+  },
+  {
+    "EventCode": "2E01A",
+    "EventName": "PM_DISP_STALL_HELD_XVFC_MAPPER_CYC",
+    "BriefDescription": "Dispatch held because the XVFC mapper/SRB was full"
+  },
+  {
+    "EventCode": "2D12E",
+    "EventName": "PM_MRK_DTLB_HIT",
+    "BriefDescription": "Number of times the  PTE required by the instruction was resident in the TLB (data TLB access) for the marked instruction. When MMCR1[16]=0 this event counts only demand hits.  When MMCR1[16]=1 this event includes demand and prefetch.  Applies to both HPT and RPT"
+  },
+  {
+    "EventCode": "2404E",
+    "EventName": "PM_INST_RADIX_L2_PTE_FROM_L3",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from the core's L3 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "25040",
+    "EventName": "PM_INST_RADIX_L2_PDE_FROM_L3",
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L3 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "25042",
+    "EventName": "PM_INST_RADIX_L3_PTE_FROM_L3",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from the core's L3 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "25044",
+    "EventName": "PM_INST_RADIX_L3_PDE_FROM_L3",
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L3 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "25046",
+    "EventName": "PM_INST_RADIX_L4_PTE_FROM_L3",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L3 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "2C142",
+    "EventName": "PM_MRK_XFER_FROM_SRC_PMC2",
+    "BriefDescription": "The processor's data cache was reloaded from local core's L3 without dispatch conflicts hit on Mepf state due to a demand load"
+  },
+  {
+    "EventCode": "2015E",
+    "EventName": "PM_MRK_FAB_RSP_RWITM_RTY",
+    "BriefDescription": "Sampled store did a rwitm and got a rty"
+  },
+  {
+    "EventCode": "24050",
+    "EventName": "PM_IOPS_DISP",
+    "BriefDescription": "Internal Operations dispatched.  PM_IOPS_DISP / PM_INST_DISP will show the average number of internal ops per PPC instruction."
+  },
+  {
+    "EventCode": "24154",
+    "EventName": "PM_THRESH_ACCUMULATOR",
+    "BriefDescription": "This event increments every time the threshold event counter ticks. Thresholding must be enabled (via MMCRA) and the thresholding start event must occur for this counter to increment. It will stop incrementing when the thresholding stop event occurs or when thresholding is disabled, until the next time a configured thresholding start event occurs.  This event will not be cleared every time the start event occurs but it will continue to accumulate until it is cleared by software"
+  },
+  {
+    "EventCode": "2405E",
+    "EventName": "PM_ISSUE_CANCEL",
+    "BriefDescription": "An instruction issued and the issue was later cancelled.  Only one cancel per PPC instruction"
+  },
+  {
+    "EventCode": "2C05C",
+    "EventName": "PM_INST_GRP_PUMP_CPRED",
+    "BriefDescription": "Initial and Final Pump Scope was group pump (prediction=correct) for an instruction fetch (demand only)"
+  },
+  {
+    "EventCode": "2C05E",
+    "EventName": "PM_INST_GRP_PUMP_MPRED_TOO_BIG",
+    "BriefDescription": "Final Pump Scope (Group) ended up either larger or smaller than Initial Pump Scope for an instruction fetch (demand only)"
+  },
+  {
+    "EventCode": "2D05C",
+    "EventName": "PM_IERAT_MISS_16G",
+    "BriefDescription": "IERAT Miss (Instruction TLB Access) page size 16G"
+  },
+  {
+    "EventCode": "2E050",
+    "EventName": "PM_DTLB_HIT_4K",
+    "BriefDescription": "Data TLB reload (after a miss) page size 4K.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "2E054",
+    "EventName": "PM_ITLB_HIT_2M",
+    "BriefDescription": "Instruction TLB reload (after a miss) page size 2M, which implies Radix Page Table translation is use.  It includes prefetch and demand activity"
+  },
+  {
+    "EventCode": "2E056",
+    "EventName": "PM_ITLB_HIT_16M",
+    "BriefDescription": "Instruction TLB reload (after a miss) page size 16M.  It includes prefetch and demand activity"
+  },
+  {
+    "EventCode": "2F152",
+    "EventName": "PM_MRK_FAB_RSP_DCLAIM_CYC",
+    "BriefDescription": "cycles L2 RC took for a dclaim"
+  },
+  {
+    "EventCode": "20064",
+    "EventName": "PM_IERAT_MISS_4K",
+    "BriefDescription": "IERAT reloaded after a miss (Instruction TLB access) for 4K pages"
+  },
+  {
+    "EventCode": "2006A",
+    "EventName": "PM_DISP_HELD_STF_MAPPER_CYC",
+    "BriefDescription": "PM_DISP_HELD_STF_MAPPER_CYC"
+  },
+  {
+    "EventCode": "200FA",
+    "EventName": "PM_BR_TAKEN_CMPL",
+    "BriefDescription": "New event for Branch Taken"
+  },
+  {
+    "EventCode": "30012",
+    "EventName": "PM_FLUSH_COMPLETION",
+    "BriefDescription": "The instruction that was next to complete (oldest in the pipeline) did not complete because it suffered a flush"
+  },
+  {
+    "EventCode": "30014",
+    "EventName": "PM_EXEC_STALL_STORE",
+    "BriefDescription": "Finish stall because the NTF instruction was a store"
+  },
+  {
+    "EventCode": "30018",
+    "EventName": "PM_DISP_STALL_HELD_SCOREBOARD_CYC",
+    "BriefDescription": "Cycles in which dispatch is held while waiting on the Scoreboard.  This event combines VSCR and FPSCR together"
+  },
+  {
+    "EventCode": "3001C",
+    "EventName": "PM_LD_REJECT_LMQ_FULL",
+    "BriefDescription": "LSU Reject due to LMQ full (up to 4 per cycles)"
+  },
+  {
+    "EventCode": "30026",
+    "EventName": "PM_EXEC_STALL_STORE_MISS",
+    "BriefDescription": "Finish stall because the next to finish instruction was a store whose cache line was not resident in the L1 and had to wait for allocation of the missing line into the L1"
+  },
+  {
+    "EventCode": "3012A",
+    "EventName": "PM_MRK_L2_RC_DONE",
+    "BriefDescription": "L2 RC machine completed the transaction for the marked instruction"
+  },
+  {
+    "EventCode": "35046",
+    "EventName": "PM_INST_RADIX_L2_PTE_FROM_L3MISS",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from a source beyond the core's chaches.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "35048",
+    "EventName": "PM_INST_RADIX_L2_PDE_FROM_L3MISS",
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from a source beyond the core's chaches.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "3504A",
+    "EventName": "PM_INST_RADIX_L3_PTE_FROM_L3MISS",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from a source beyond the core's chaches.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "3504C",
+    "EventName": "PM_INST_RADIX_L3_PDE_FROM_L3MISS",
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from a source beyond the core's chaches.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "3504E",
+    "EventName": "PM_INST_RADIX_L4_PTE_FROM_L3MISS",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from a source beyond the core's chaches.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "3F046",
+    "EventName": "PM_ITLB_HIT_1G",
+    "BriefDescription": "Instruction TLB reload (after a miss) page size 1G, which implies Radix Page Table translation is in use. It includes prefetch and demand activity"
+  },
+  {
+    "EventCode": "3F048",
+    "EventName": "PM_ITLB_HIT_16G",
+    "BriefDescription": "Instruction TLB reload (after a miss) page size 16G.  It includes prefetch and demand activity"
+  },
+  {
+    "EventCode": "3F04E",
+    "EventName": "PM_PROBLEM_CYC",
+    "BriefDescription": "Cycles in which the MSR register shows the thread in problem state.  This is considered "
+  },
+  {
+    "EventCode": "30154",
+    "EventName": "PM_MRK_FAB_RSP_DCLAIM",
+    "BriefDescription": "Marked store had to do a dclaim"
+  },
+  {
+    "EventCode": "3015E",
+    "EventName": "PM_MRK_FAB_RSP_CLAIM_RTY",
+    "BriefDescription": "Sampled store did a rwitm and got a rty"
+  },
+  {
+    "EventCode": "34050",
+    "EventName": "PM_INST_SYS_PUMP_CPRED",
+    "BriefDescription": "Initial and Final Pump Scope was system pump (prediction=correct) for an instruction fetch"
+  },
+  {
+    "EventCode": "34052",
+    "EventName": "PM_INST_SYS_PUMP_MPRED_TOO_BIG",
+    "BriefDescription": "Final Pump Scope (system) mispredicted. Either the original scope was too small (Chip/Group) or the original scope was System and it should have been smaller. Counts for an instruction fetch"
+  },
+  {
+    "EventCode": "34058",
+    "EventName": "PM_DISP_STALL_BR_MPRED_ICMISS",
+    "BriefDescription": "There are no instructions dispatched for this thread after a mispredicted branch also resulted in an instruction cache miss"
+  },
+  {
+    "EventCode": "3C05A",
+    "EventName": "PM_DTLB_HIT_64K",
+    "BriefDescription": "Data TLB reload (after a miss) page size 64K. When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "3D05C",
+    "EventName": "PM_DISP_STALL_HELD_RENAME_CYC",
+    "BriefDescription": "Dispatch held because the mapper/SRB was full. Includes GPR (count, link, tar), VSR, VMR, FPR and XVFC"
+  },
+  {
+    "EventCode": "3E052",
+    "EventName": "PM_DISP_STALL_IC_L3",
+    "BriefDescription": "Dispatch was stalled while the instruction was fetched from the local L3.  The ICT was empty for the duration of this stall"
+  },
+  {
+    "EventCode": "3E054",
+    "EventName": "PM_LD_MISS_L1",
+    "BriefDescription": "Load Missed L1, counted at execution time (can be greater than loads finished). LMQ merges are not included in this count. i.e. if a load instruction misses on an address that is already allocated on the LMQ, this event will not increment for that load). Note that this count is per slice, so if a load spans multiple slices this event will increment multiple times for a single load."
+  },
+  {
+    "EventCode": "30060",
+    "EventName": "PM_DISP_HELD_XVFC_MAPPER_CYC",
+    "BriefDescription": "PM_DISP_HELD_XVFC_MAPPER_CYC"
+  },
+  {
+    "EventCode": "30064",
+    "EventName": "PM_NTF_ISSUE_HOLD_CYC",
+    "BriefDescription": "Number of cycles in which the oldest instruction in the pipeline is being held at issue."
+  },
+  {
+    "EventCode": "3006A",
+    "EventName": "PM_IERAT_MISS_64K",
+    "BriefDescription": "IERAT Miss (Instruction TLB Access) page size 64K"
+  },
+  {
+    "EventCode": "301EA",
+    "EventName": "PM_THRESH_EXC_1024",
+    "BriefDescription": "Threshold counter exceeded a value of 1024"
+  },
+  {
+    "EventCode": "300FA",
+    "EventName": "PM_INST_FROM_L3MISS",
+    "BriefDescription": "Marked instruction was reloaded from a location beyond the local chiplet"
+  },
+  {
+    "EventCode": "40006",
+    "EventName": "PM_ISSUE_KILL",
+    "BriefDescription": "Number of cycles in which an instruction or group of instructions was primed to issue but was killed before being written.  This event increments once per occurrence, regardless of how many instructions are included in the issue group"
+  },
+  {
+    "EventCode": "40116",
+    "EventName": "PM_MRK_LARX_FIN",
+    "BriefDescription": "Larx finished"
+  },
+  {
+    "EventCode": "4C010",
+    "EventName": "PM_DISP_STALL_BR_MPRED_IC_L3MISS",
+    "BriefDescription": "Dispatch was stalled while the instruction was fetched from sources beyond the local L3 after suffering a branch mispredict.  The ICT was empty for the duration of this stall.  The source could be local, remote or distant memory or another core's cache"
+  },
+  {
+    "EventCode": "4D01E",
+    "EventName": "PM_DISP_STALL_BR_MPRED",
+    "BriefDescription": "Ict empty for this thread due to branch mispred"
+  },
+  {
+    "EventCode": "4E010",
+    "EventName": "PM_DISP_STALL_IC_L3MISS",
+    "BriefDescription": "Dispatch was stalled while the instruction was fetched from any source beyond the local L3.  The ICT was empty for the duration of this stall. The source could be local/remote/distant memory or another core's cache"
+  },
+  {
+    "EventCode": "4E01A",
+    "EventName": "PM_DISP_STALL_HELD_CYC",
+    "BriefDescription": "Cycles in which the NTC instruction is held at dispatch for any reason"
+  },
+  {
+    "EventCode": "4D02E",
+    "EventName": "PM_NO_FETCH_CYC",
+    "BriefDescription": "Cycles in which no instructions were fetched by the Instruction Fetch Unit (IFU), for any reason"
+  },
+  {
+    "EventCode": "45046",
+    "EventName": "PM_INST_RADIX_L2_PTE_FROM_DISTANT",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "45048",
+    "EventName": "PM_INST_RADIX_L2_PDE_FROM_DISTANT",
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "4504A",
+    "EventName": "PM_INST_RADIX_L3_PTE_FROM_DISTANT",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "4504C",
+    "EventName": "PM_INST_RADIX_L3_PDE_FROM_DISTANT",
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "4504E",
+    "EventName": "PM_INST_RADIX_L4_PTE_FROM_DISTANT",
+    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[17] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+  },
+  {
+    "EventCode": "4015E",
+    "EventName": "PM_MRK_FAB_RSP_RD_RTY",
+    "BriefDescription": "Sampled L2 reads retry count"
+  },
+  {
+    "EventCode": "44050",
+    "EventName": "PM_INST_SYS_PUMP_MPRED_RTY",
+    "BriefDescription": "Final Pump Scope (system) ended up larger than Initial Pump Scope (Chip/Group) for an instruction fetch"
+  },
+  {
+    "EventCode": "44056",
+    "EventName": "PM_VECTOR_ST_CMPL",
+    "BriefDescription": "Number of vector store instructions completed"
+  },
+  {
+    "EventCode": "4E052",
+    "EventName": "PM_DTLB_HIT_16M",
+    "BriefDescription": "Data TLB reload (after a miss) page size 16M.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "4E054",
+    "EventName": "PM_DTLB_HIT_1G",
+    "BriefDescription": "Data TLB reload (after a miss) page size 1G. Implies radix translation was used.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+  },
+  {
+    "EventCode": "4F150",
+    "EventName": "PM_MRK_FAB_RSP_RWITM_CYC",
+    "BriefDescription": "cycles L2 RC took for a rwitm"
+  },
+  {
+    "EventCode": "40060",
+    "EventName": "PM_DISP_HELD_SCOREBOARD_CYC",
+    "BriefDescription": "Branch Instruction completed"
+  },
+  {
+    "EventCode": "40062",
+    "EventName": "PM_DISP_HELD_RENAME_CYC",
+    "BriefDescription": "PM_DISP_HELD_RENAME_CYC"
+  },
+  {
+    "EventCode": "40066",
+    "EventName": "PM_ITLB_HIT_4K",
+    "BriefDescription": "Instruction TLB reload (after a miss) page size 4K.  It includes prefetch and demand activity"
+  },
+  {
+    "EventCode": "40068",
+    "EventName": "PM_IERAT_MISS_2M",
+    "BriefDescription": "IERAT Miss (Instruction TLB Access) page size 2M. Implies radix translation"
+  },
+  {
+    "EventCode": "4006A",
+    "EventName": "PM_IERAT_MISS_16M",
+    "BriefDescription": "IERAT Miss (Instruction TLB Access) page size 16M"
+  },
+  {
+    "EventCode": "4006C",
+    "EventName": "PM_ITLB_MISS_4K",
+    "BriefDescription": "Instruction TLB reload (after a miss) page size 4K.  It includes prefetch and demand activity"
+  },
+  {
+    "EventCode": "400FC",
+    "EventName": "PM_ITLB_MISS",
+    "BriefDescription": "ITLB Reloaded"
+  }
+]
