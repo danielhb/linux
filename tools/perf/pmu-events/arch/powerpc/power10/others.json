@@ -265,6 +265,11 @@
     "BriefDescription": "External interrupt initiated by the OS"
   },
   {
+    "EventCode": "3E05E",
+    "EventName": "PM_L3_CO_MEPF",
+    "BriefDescription": "L3 castouts in Mepf state for this core.  This event was reported by thread in P9 but reported for the whole core in P10."
+  },
+  {
     "EventCode": "3F150",
     "EventName": "PM_MRK_ST_DRAIN_CYC",
     "BriefDescription": "cycles to drain st from core to L2"
