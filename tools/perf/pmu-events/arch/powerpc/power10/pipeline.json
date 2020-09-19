@@ -57,27 +57,27 @@
   {
     "EventCode": "1005A",
     "EventName": "PM_FLUSH_MPRED",
-    "BriefDescription": "A flush occurred due to a mispredicted branch.  Includes target and direction"
+    "BriefDescription": "A flush occurred due to a mispredicted branch. Includes target and direction"
   },
   {
     "EventCode": "1C05A",
     "EventName": "PM_DERAT_MISS_2M",
-    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 2M. Implies radix translation.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 2M. Implies radix translation. When MMCR1[16]=0 this event counts only DERAT reloads for demand misses. When MMCR1[16]=1 this event includes demand misses and prefetches"
   },
   {
     "EventCode": "10064",
     "EventName": "PM_DISP_STALL_IC_L2",
-    "BriefDescription": "Dispatch was stalled while the instruction was fetched from the local L2.  The ICT was empty for the duration of this stall"
+    "BriefDescription": "Dispatch was stalled while the instruction was fetched from the local L2. The ICT was empty for the duration of this stall"
   },
   {
     "EventCode": "10068",
     "EventName": "PM_BR_FIN",
-    "BriefDescription": "A branch instruction finished.  Includes predicted/mispredicted/unconditional"
+    "BriefDescription": "A branch instruction finished. Includes predicted/mispredicted/unconditional"
   },
   {
     "EventCode": "1006A",
     "EventName": "PM_FX_LSU_FIN",
-    "BriefDescription": "Simple fixed point instruction issued to the store unit.  Measured at finish time"
+    "BriefDescription": "Simple fixed point instruction issued to the store unit. Measured at finish time"
   },
   {
     "EventCode": "1006C",
@@ -92,7 +92,7 @@
   {
     "EventCode": "2000A",
     "EventName": "PM_HYPERVISOR_CYC",
-    "BriefDescription": "Cycles in which msr_hv is high and msr_pr is low.  These are considered hypervisor cycles in ISA 3.01"
+    "BriefDescription": "Cycles in which msr_hv is high and msr_pr is low. These are considered hypervisor cycles in ISA 3.01"
   },
   {
     "EventCode": "2000E",
@@ -122,17 +122,17 @@
   {
     "EventCode": "2D018",
     "EventName": "PM_EXEC_STALL_VSU",
-    "BriefDescription": "The oldest instructio in the pipeline is executing in the VSU.  Includes FXU, VSU, CRU"
+    "BriefDescription": "The oldest instruction in the pipeline is executing in the VSU. Includes FXU, VSU, CRU"
   },
   {
     "EventCode": "2E01E",
     "EventName": "PM_EXEC_STALL_NTC_FLUSH",
-    "BriefDescription": "Cycles spent executing an NTC instruction that gets flushed some time after dispatch.  Note that if the flush of the oldest instruction happens after finish, the cycles from dispatch to issue will be included in PM_DISP_STALL and the cycles from issue to finish will be included in PM_EXEC_STALL and its corresponding children."
+    "BriefDescription": "Cycles spent executing an NTC instruction that gets flushed some time after dispatch. Note that if the flush of the oldest instruction happens after finish, the cycles from dispatch to issue will be included in PM_DISP_STALL and the cycles from issue to finish will be included in PM_EXEC_STALL and its corresponding children."
   },
   {
     "EventCode": "2013C",
     "EventName": "PM_MRK_FX_LSU_FIN",
-    "BriefDescription": "The marked instruction was simple fixed point that was issued to the store unit.  Measured at finish time"
+    "BriefDescription": "The marked instruction was simple fixed point that was issued to the store unit. Measured at finish time"
   },
   {
     "EventCode": "2405A",
@@ -202,7 +202,7 @@
   {
     "EventCode": "3F042",
     "EventName": "PM_HOT_LOCK_COLLISION",
-    "BriefDescription": "A thread [x] larx is sent to the L1 miss pipe to generate a request to the L2.  However, the thread [x] larx is blocked because a thread [y] larx stcx sequence to the same cacheline is already in progress. The thread [x] larx will be sent once the thread [y] stcx has drained to the L2.  This collision pulses once for the detection descrined above and is meant as a count event.  "
+    "BriefDescription": "A thread [x] larx is sent to the L1 miss pipe to generate a request to the L2.  However, the thread [x] larx is blocked because a thread [y] larx stcx sequence to the same cacheline is already in progress. The thread [x] larx will be sent once the thread [y] stcx has drained to the L2.  This collision pulses once for the detection described above and is meant as a count event.  "
   },
   {
     "EventCode": "3F044",
@@ -222,7 +222,7 @@
   {
     "EventCode": "3D058",
     "EventName": "PM_SCALAR_FSQRT_FDIV_ISSUE",
-    "BriefDescription": "Scalar versions of four flops operations fdiv,fsqrt (xvdivdp, xvdivsp, xvsqrtdp, xvsqrtsp)"
+    "BriefDescription": "Scalar versions of four flops fdiv,fsqrt (xvdivdp, xvdivsp, xvsqrtdp, xvsqrtsp)"
   },
   {
     "EventCode": "30066",
@@ -312,12 +312,12 @@
   {
     "EventCode": "4D050",
     "EventName": "PM_VSU_NON_FLOP_CMPL",
-    "BriefDescription": "Non FLOP operation completed"
+    "BriefDescription": "Non FLOP  completed"
   },
   {
     "EventCode": "4D052",
     "EventName": "PM_2FLOP_CMPL",
-    "BriefDescription": "DP vector version of fmul, fsub, fcmp, fsel, fabs, fnabs, fres ,fsqrte, fneg "
+    "BriefDescription": "DP vector version of fmul, fsub, fcmp, fsel, fabs, fnabs, fres ,fsqrte, fneg "
   },
   {
     "EventCode": "401EC",

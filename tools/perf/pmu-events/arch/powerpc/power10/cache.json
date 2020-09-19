@@ -7,27 +7,27 @@
   {
     "EventCode": "14042",
     "EventName": "PM_DATA_RADIX_L2_PTE_FROM_L2",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "14044",
     "EventName": "PM_DATA_RADIX_L2_PDE_FROM_L2",
-    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "14046",
     "EventName": "PM_DATA_RADIX_L3_PTE_FROM_L2",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "14048",
     "EventName": "PM_DATA_RADIX_L3_PDE_FROM_L2",
-    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "1404A",
     "EventName": "PM_DATA_RADIX_L4_PTE_FROM_L2",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "101E6",
@@ -37,52 +37,52 @@
   {
     "EventCode": "24042",
     "EventName": "PM_DATA_RADIX_L2_PTE_FROM_L3",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from the core's L3 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from the core's L3 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads. Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included. If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "24044",
     "EventName": "PM_DATA_RADIX_L2_PDE_FROM_L3",
-    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L3 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L3 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads. Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included. If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "24046",
     "EventName": "PM_DATA_RADIX_L3_PTE_FROM_L3",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from the core's L3 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from the core's L3 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads. Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included. If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "24048",
     "EventName": "PM_DATA_RADIX_L3_PDE_FROM_L3",
-    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L3 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L3 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads. Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included. If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "2404A",
     "EventName": "PM_DATA_RADIX_L4_PTE_FROM_L3",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L3 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L3 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "3404A",
     "EventName": "PM_DATA_RADIX_L2_PTE_FROM_L3MISS",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from a source beyond the core's chaches.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from a source beyond the core's caches. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "3404C",
     "EventName": "PM_DATA_RADIX_L2_PDE_FROM_L3MISS",
-    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from a source beyond the core's chaches.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from a source beyond the core's caches. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "3404E",
     "EventName": "PM_DATA_RADIX_L3_PTE_FROM_L3MISS",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from a source beyond the core's chaches.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from a source beyond the core's caches. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "35040",
     "EventName": "PM_DATA_RADIX_L3_PDE_FROM_L3MISS",
-    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from a source beyond the core's chaches.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from a source beyond the core's caches. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "35042",
     "EventName": "PM_DATA_RADIX_L4_PTE_FROM_L3MISS",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from a source beyond the core's chaches.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from a source beyond the core's caches. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "34056",
@@ -117,27 +117,27 @@
   {
     "EventCode": "4404A",
     "EventName": "PM_DATA_RADIX_L2_PTE_FROM_DISTANT",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 2 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "4404C",
     "EventName": "PM_DATA_RADIX_L2_PDE_FROM_DISTANT",
-    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "4404E",
     "EventName": "PM_DATA_RADIX_L3_PTE_FROM_DISTANT",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 3 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "45040",
     "EventName": "PM_DATA_RADIX_L3_PDE_FROM_DISTANT",
-    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Directory Entry was reloaded to a level 2 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "45042",
     "EventName": "PM_DATA_RADIX_L4_PTE_FROM_DISTANT",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L2 data cache.   If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included. If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "401EA",
@@ -147,6 +147,6 @@
   {
     "EventCode": "400F6",
     "EventName": "PM_BR_MPRED_CMPL",
-    "BriefDescription": "Number of Branch Mispredicts.  Includes direction and target."
+    "BriefDescription": "Number of Branch Mispredicts. Includes direction and target."
   }
 ]

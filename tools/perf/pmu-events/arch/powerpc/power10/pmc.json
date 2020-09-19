@@ -22,7 +22,7 @@
   {
     "EventCode": "40118",
     "EventName": "PM_MRK_DCACHE_RELOAD_INTV",
-    "BriefDescription": "The marked instruction reloaded data from any of the caches on the system excluding the local caches.   When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+    "BriefDescription": "The marked instruction reloaded data from any of the caches on the system excluding the local caches. When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
   },
   {
     "EventCode": "40050",
@@ -32,7 +32,7 @@
   {
     "EventCode": "45050",
     "EventName": "PM_1FLOP_CMPL",
-    "BriefDescription": "one flop (fadd, fmul, fsub, fcmp, fsel, fabs, fnabs, fres, fsqrte, fneg) operation completed"
+    "BriefDescription": "one flop (fadd, fmul, fsub, fcmp, fsel, fabs, fnabs, fres, fsqrte, fneg) completed"
   },
   {
     "EventCode": "45052",

@@ -7,7 +7,7 @@
   {
     "EventCode": "10132",
     "EventName": "PM_MRK_INST_ISSUED",
-    "BriefDescription": "Marked instruction issued.  Note that stores always get issued twice, the address gets issued to the LSU and the data gets issued to the VSU.  Also, issues can sometimes get killed/cancelled and cause multiple sequential issues for the same instruction."
+    "BriefDescription": "Marked instruction issued. Note that stores always get issued twice, the address gets issued to the LSU and the data gets issued to the VSU.  Also, issues can sometimes get killed/cancelled and cause multiple sequential issues for the same instruction."
   },
   {
     "EventCode": "1F05A",
@@ -27,7 +27,7 @@
   {
     "EventCode": "20112",
     "EventName": "PM_MRK_NTF_FIN",
-    "BriefDescription": "The marked instruction became the oldest in the pipeline before it finished.  It excludes instructions that finish at dispatch"
+    "BriefDescription": "The marked instruction became the oldest in the pipeline before it finished. It excludes instructions that finish at dispatch"
   },
   {
     "EventCode": "2C01C",
@@ -37,7 +37,7 @@
   {
     "EventCode": "20138",
     "EventName": "PM_MRK_ST_NEST",
-    "BriefDescription": "A store has been sampled/marked and is at the point in execution where it has completed in the core and can no longer be flushed.  At this point the store is sent to the L2."
+    "BriefDescription": "A store has been sampled/marked and is at the point in execution where it has completed in the core and can no longer be flushed. At this point the store is sent to the L2."
   },
   {
     "EventCode": "2013A",
@@ -47,7 +47,7 @@
   {
     "EventCode": "2C144",
     "EventName": "PM_MRK_XFER_FROM_SRC_CYC_PMC2",
-    "BriefDescription": "The processor's data cache was reloaded with Modified (M) data from another core's L3 on the same chip due to a demand load"
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[15:27].  Only reloads to satisfy a demand miss are included in this count "
   },
   {
     "EventCode": "24156",
@@ -132,7 +132,7 @@
   {
     "EventCode": "301E4",
     "EventName": "PM_MRK_BR_MPRED_CMPL",
-    "BriefDescription": "Marked Branch Mispredicted.  Includes directon and target"
+    "BriefDescription": "Marked Branch Mispredicted.  Includes direction and target"
   },
   {
     "EventCode": "300F6",
@@ -192,7 +192,7 @@
   {
     "EventCode": "4D05A",
     "EventName": "PM_NON_MATH_FLOP_CMPL",
-    "BriefDescription": "Non FLOP operation completed"
+    "BriefDescription": "Non FLOP completed"
   },
   {
     "EventCode": "401E0",

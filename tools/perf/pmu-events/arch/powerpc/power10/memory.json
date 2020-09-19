@@ -12,17 +12,17 @@
   {
     "EventCode": "1C040",
     "EventName": "PM_XFER_FROM_SRC_PMC1",
-    "BriefDescription": "The processor's L1 data cache was reloaded from the source specified in MMCR3[0:10]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+    "BriefDescription": "The processor's L1 data cache was reloaded from the source specified in MMCR3[0:12]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
   },
   {
     "EventCode": "1C142",
     "EventName": "PM_MRK_XFER_FROM_SRC_PMC1",
-    "BriefDescription": "For a marked data transfer instruction, the processor's L1 data cache was reloaded from the source specified in MMCR3[0:10]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+    "BriefDescription": "For a marked data transfer instruction, the processor's L1 data cache was reloaded from the source specified in MMCR3[0:12]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
   },
   {
     "EventCode": "1C144",
     "EventName": "PM_MRK_XFER_FROM_SRC_CYC_PMC1",
-    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[0:10].  Only reloads to satisfy a demand miss are included in this count "
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[0:12]. Only reloads to satisfy a demand miss are included in this count "
   },
   {
     "EventCode": "1C146",
@@ -32,7 +32,7 @@
   {
     "EventCode": "1C148",
     "EventName": "PM_MRK_DATA_FLUSHED_FROM_SRC_CYC_PMC1",
-    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[0:10].  Only reloads to satisfy a demand miss that was later flushed are included in this count "
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[0:10]. Only reloads to satisfy a demand miss that was later flushed are included in this count "
   },
   {
     "EventCode": "1C050",
@@ -52,27 +52,27 @@
   {
     "EventCode": "1C056",
     "EventName": "PM_DERAT_MISS_4K",
-    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 4K.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 4K. When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
   },
   {
     "EventCode": "1C058",
     "EventName": "PM_DTLB_MISS_16G",
-    "BriefDescription": "Data TLB Miss page size 16G.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+    "BriefDescription": "Data TLB Miss page size 16G. When MMCR1[16]=0 this event counts only for demand misses. When MMCR1[16]=1 this event includes demand misses and prefetches"
   },
   {
     "EventCode": "1C05C",
     "EventName": "PM_DTLB_MISS_2M",
-    "BriefDescription": "Data TLB reload (after a miss) page size 2M. Implies radix translation was used.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+    "BriefDescription": "Data TLB reload (after a miss) page size 2M. Implies radix translation was used.  When MMCR1[16]=0 this event counts only for demand misses. When MMCR1[16]=1 this event includes demand misses and prefetches"
   },
   {
     "EventCode": "1D15C",
     "EventName": "PM_MRK_DTLB_MISS_1G",
-    "BriefDescription": "Marked Data TLB reload (after a miss) page size 1G. Implies radix translation was used.  When MMCR1[16]=0 this event counts only for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+    "BriefDescription": "Marked Data TLB reload (after a miss) page size 1G. Implies radix translation was used. When MMCR1[16]=0 this event counts only for demand misses. When MMCR1[16]=1 this event includes demand misses and prefetches"
   },
   {
     "EventCode": "1E152",
     "EventName": "PM_MRK_DERAT_MISS_16M",
-    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 16M for a marked instruction.  When MMCR1[16]=0 this event counts only DERAT reloads for demand misses.  When MMCR1[16]=1 this event includes demand misses and prefetches"
+    "BriefDescription": "Data ERAT Miss (Data TLB Access) page size 16M for a marked instruction. When MMCR1[16]=0 this event counts only DERAT reloads for demand misses. When MMCR1[16]=1 this event includes demand misses and prefetches"
   },
   {
     "EventCode": "1E056",
@@ -107,7 +107,7 @@
   {
     "EventCode": "2001A",
     "EventName": "PM_ITLB_HIT",
-    "BriefDescription": "Number of times the  PTE required to translate the instruction address was resident in the TLB (instruction TLB access).  Applies to both HPT and RPT"
+    "BriefDescription": "Number of times the  PTE required to translate the instruction address was resident in the TLB (instruction TLB access). Applies to both HPT and RPT"
   },
   {
     "EventCode": "2D12C",
@@ -117,12 +117,12 @@
   {
     "EventCode": "2003E",
     "EventName": "PM_PTESYNC_FIN",
-    "BriefDescription": "Ptesync instruction finished in the store unit.  Only one ptesync can finish at a time."
+    "BriefDescription": "Ptesync instruction finished in the store unit. Only one ptesync can finish at a time."
   },
   {
     "EventCode": "2C040",
     "EventName": "PM_XFER_FROM_SRC_PMC2",
-    "BriefDescription": "The processor's data cache was reloaded from local core's L2 hit without dispatch conflicts on Mepf state due to a demand load"
+    "BriefDescription": "The processor's L1 data cache was reloaded from the source specified in MMCR3[15:27]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
   },
   {
     "EventCode": "2C146",
@@ -227,17 +227,17 @@
   {
     "EventCode": "3C040",
     "EventName": "PM_XFER_FROM_SRC_PMC3",
-    "BriefDescription": "The processor's L1 data cache was reloaded from the source specified in MMCR3[26:36]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+    "BriefDescription": "The processor's L1 data cache was reloaded from the source specified in MMCR3[30:42]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
   },
   {
     "EventCode": "3C142",
     "EventName": "PM_MRK_XFER_FROM_SRC_PMC3",
-    "BriefDescription": "For a marked data transfer instruction, the processor's L1 data cache was reloaded from the source specified in MMCR3[26:36]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+    "BriefDescription": "For a marked data transfer instruction, the processor's L1 data cache was reloaded from the source specified in MMCR3[30:42]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
   },
   {
     "EventCode": "3C144",
     "EventName": "PM_MRK_XFER_FROM_SRC_CYC_PMC3",
-    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[26:36].  Only reloads to satisfy a demand miss are included in this count "
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[30:42]. Only reloads to satisfy a demand miss are included in this count "
   },
   {
     "EventCode": "3C146",
@@ -307,17 +307,17 @@
   {
     "EventCode": "4C040",
     "EventName": "PM_XFER_FROM_SRC_PMC4",
-    "BriefDescription": "The processor's L1 data cache was reloaded from the source specified in MMCR3[39:49]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+    "BriefDescription": "The processor's L1 data cache was reloaded from the source specified in MMCR3[45:57]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
   },
   {
     "EventCode": "4C142",
     "EventName": "PM_MRK_XFER_FROM_SRC_PMC4",
-    "BriefDescription": "For a marked data transfer instruction, the processor's L1 data cache was reloaded from the source specified in MMCR3[39:49]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
+    "BriefDescription": "For a marked data transfer instruction, the processor's L1 data cache was reloaded from the source specified in MMCR3[45:57]. If MMCR1[16|17] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss. If MMCR1[16|17] is 1, this count includes both demand misses and prefetch reloads."
   },
   {
     "EventCode": "4C144",
     "EventName": "PM_MRK_XFER_FROM_SRC_CYC_PMC4",
-    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[39:49].  Only reloads to satisfy a demand miss are included in this count "
+    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[45:57]. Only reloads to satisfy a demand miss are included in this count "
   },
   {
     "EventCode": "4C146",

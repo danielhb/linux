@@ -17,7 +17,7 @@
   {
     "EventCode": "10026",
     "EventName": "PM_EXT_INT_EBB",
-    "BriefDescription": "External interrupt due to Event Based Branch.  This means the PMU interrupt is being handled by user code."
+    "BriefDescription": "External interrupt due to Event Based Branch. This means the PMU interrupt is being handled by user code."
   },
   {
     "EventCode": "1002A",
@@ -62,7 +62,7 @@
   {
     "EventCode": "1F15C",
     "EventName": "PM_MRK_STCX_L2_CYC",
-    "BriefDescription": "Cycles spent in the nest portion of a marked Stcx instruction.  It starts counting when the operation starts to drain to the L2 and it stops counting when the instruction retires from the Instruction Completion Table (ICT) in the Instruction Sequencing Unit (ISU)"
+    "BriefDescription": "Cycles spent in the nest portion of a marked Stcx instruction. It starts counting when the operation starts to drain to the L2 and it stops counting when the instruction retires from the Instruction Completion Table (ICT) in the Instruction Sequencing Unit (ISU)"
   },
   {
     "EventCode": "10066",
@@ -92,17 +92,12 @@
   {
     "EventCode": "100FC",
     "EventName": "PM_LD_REF_L1",
-    "BriefDescription": "All L1 D cache load references counted at finish, gated by reject.  In P9 and earlier this event counted only cacheable loads but in P10 both cacheable and non-cacheable loads are included"
+    "BriefDescription": "All L1 D cache load references counted at finish, gated by reject. In P9 and earlier this event counted only cacheable loads but in P10 both cacheable and non-cacheable loads are included"
   },
   {
     "EventCode": "20006",
     "EventName": "PM_DISP_STALL_HELD_ISSQ_FULL_CYC",
-    "BriefDescription": "Dispatch held due to Issue q full. Includes issue queue and branch queue"
-  },
-  {
-    "EventCode": "20108",
-    "EventName": "PM_MRK_TLBIE_CYC",
-    "BriefDescription": "Latency of TLBIE instructions from the cycle they become NTF until they complete in the nest"
+    "BriefDescription": "Dispatch held due to Issue queue full. Includes issue queue and branch queue"
   },
   {
     "EventCode": "2000C",
@@ -132,12 +127,12 @@
   {
     "EventCode": "20132",
     "EventName": "PM_MRK_DFU_ISSUE",
-    "BriefDescription": "The marked instruction was a decimal floating point op issued to the VSU.  Measured at issue time"
+    "BriefDescription": "The marked instruction was a decimal floating point op issued to the VSU. Measured at issue time"
   },
   {
     "EventCode": "20134",
     "EventName": "PM_MRK_FXU_ISSUE",
-    "BriefDescription": "The marked instruction was a fixed point op issued to the VSU.  Measured at issue time"
+    "BriefDescription": "The marked instruction was a fixed point op issued to the VSU. Measured at issue time"
   },
   {
     "EventCode": "2504C",
@@ -457,12 +452,12 @@
   {
     "EventCode": "45054",
     "EventName": "PM_FMA_CMPL",
-    "BriefDescription": "two flops operation completed (fmadd, fnmadd, fmsub, fnmsub) Scalar instructions only. "
+    "BriefDescription": "two flops completed (fmadd, fnmadd, fmsub, fnmsub) Scalar instructions only. "
   },
   {
     "EventCode": "45056",
     "EventName": "PM_SCALAR_FLOP_CMPL",
-    "BriefDescription": "Scalar flop operation completed"
+    "BriefDescription": "Scalar flop completed"
   },
   {
     "EventCode": "4505C",
@@ -487,7 +482,7 @@
   {
     "EventCode": "4E05A",
     "EventName": "PM_PREFIXED_CMPL",
-    "BriefDescription": "Prefixed instruction completed"
+    "BriefDescription": "Instruction that contains a prefix completed"
   },
   {
     "EventCode": "4E15E",

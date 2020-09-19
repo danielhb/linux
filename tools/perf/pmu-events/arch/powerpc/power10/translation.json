@@ -2,7 +2,7 @@
   {
     "EventCode": "1F15E",
     "EventName": "PM_MRK_START_PROBE_NOP_CMPL",
-    "BriefDescription": "Marked Start probe nop completed.  Instruction AND R0,R0,R0"
+    "BriefDescription": "Marked Start probe nop completed. Instruction AND R0,R0,R0"
   },
   {
     "EventCode": "20016",
@@ -57,6 +57,6 @@
   {
     "EventCode": "4D05C",
     "EventName": "PM_DPP_FLOP_CMPL",
-    "BriefDescription": "Double-Precion or Quad-Precision instruction completed"
+    "BriefDescription": "Double-Precision or Quad-Precision instruction completed"
   }
 ]
