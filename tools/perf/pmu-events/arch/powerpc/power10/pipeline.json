@@ -2,17 +2,17 @@
   {
     "EventCode": "100FE",
     "EventName": "PM_INST_CMPL",
-    "BriefDescription": "Number of PowerPC Instructions that completed."
+    "BriefDescription": "PowerPC Instructions that completed."
   },
   {
     "EventCode": "10006",
     "EventName": "PM_DISP_STALL_HELD_OTHER_CYC",
-    "BriefDescription": "Dispatch Held for any other reason"
+    "BriefDescription": "Cycles in which the NTC instruction is held at dispatch for any other reason"
   },
   {
     "EventCode": "1000C",
     "EventName": "PM_LSU_LD0_FIN",
-    "BriefDescription": "LSU Finished a PPC instruction in LD0 port"
+    "BriefDescription": "LSU Finished an internal operation in LD0 port"
   },
   {
     "EventCode": "1000E",
@@ -22,12 +22,12 @@
   {
     "EventCode": "10012",
     "EventName": "PM_LSU_ST0_FIN",
-    "BriefDescription": "LSU Finished a PPC instruction in ST0 port"
+    "BriefDescription": "LSU Finished an internal operation in ST0 port"
   },
   {
     "EventCode": "10014",
     "EventName": "PM_LSU_ST4_FIN",
-    "BriefDescription": "LSU Finished a PPC instruction in ST4 port"
+    "BriefDescription": "LSU Finished an internal operationin ST4 port"
   },
   {
     "EventCode": "10018",
@@ -97,7 +97,7 @@
   {
     "EventCode": "2000E",
     "EventName": "PM_LSU_LD1_FIN",
-    "BriefDescription": "LSU Finished a PPC instruction in LD1 port"
+    "BriefDescription": "LSU Finished an internal operation in LD1 port"
   },
   {
     "EventCode": "2C014",
@@ -112,7 +112,7 @@
   {
     "EventCode": "2D010",
     "EventName": "PM_LSU_ST1_FIN",
-    "BriefDescription": "LSU Finished a PPC instruction in ST1 port"
+    "BriefDescription": "LSU Finished an internal operation in ST1 port"
   },
   {
     "EventCode": "2D012",
@@ -167,12 +167,12 @@
   {
     "EventCode": "30008",
     "EventName": "PM_EXEC_STALL",
-    "BriefDescription": "Number of cycles when the oldest instruction in the pipeline is waiting to be finished in one of the execution units (BRU, LSU, VSU).  Only cycles between issue and finish are counted in this category."
+    "BriefDescription": "Cycles when the oldest instruction in the pipeline is waiting to be finished in one of the execution units (BRU, LSU, VSU).  Only cycles between issue and finish are counted in this category."
   },
   {
     "EventCode": "3001A",
     "EventName": "PM_LSU_ST2_FIN",
-    "BriefDescription": "LSU Finished a PPC instruction in ST2 port"
+    "BriefDescription": "LSU Finished an internal operation in ST2 port"
   },
   {
     "EventCode": "30020",
@@ -217,7 +217,7 @@
   {
     "EventCode": "30058",
     "EventName": "PM_TLBIE_FIN",
-    "BriefDescription": "Number of TLBIE instructions that finished in the LSU.  Two TLBIEs can finish each cycle.  All will be counted"
+    "BriefDescription": "TLBIE instructions that finished in the LSU.  Two TLBIEs can finish each cycle.  All will be counted"
   },
   {
     "EventCode": "3D058",
@@ -227,7 +227,7 @@
   {
     "EventCode": "30066",
     "EventName": "PM_LSU_FIN",
-    "BriefDescription": "LSU Finished a PPC instruction (up to 4 per cycle)"
+    "BriefDescription": "LSU Finished an internal operation (up to 4 per cycle)"
   },
   {
     "EventCode": "40004",
@@ -237,7 +237,7 @@
   {
     "EventCode": "40008",
     "EventName": "PM_NTC_ALL_FIN",
-    "BriefDescription": "Number of cycles in which both instructions in the ICT entry pair show as finished.  These are the cycles between finish and completion for the oldest pair of instructions in the pipeline"
+    "BriefDescription": "Cycles in which both instructions in the ICT entry pair show as finished.  These are the cycles between finish and completion for the oldest pair of instructions in the pipeline"
   },
   {
     "EventCode": "40010",
@@ -257,7 +257,7 @@
   {
     "EventCode": "4C01E",
     "EventName": "PM_LSU_ST3_FIN",
-    "BriefDescription": "LSU Finished a PPC instruction in ST3 port"
+    "BriefDescription": "LSU Finished an internal operation in ST3 port"
   },
   {
     "EventCode": "4D018",
@@ -282,7 +282,7 @@
   {
     "EventCode": "40132",
     "EventName": "PM_MRK_LSU_FIN",
-    "BriefDescription": "lsu marked instr PPC finish"
+    "BriefDescription": "LSU marked instruction finish"
   },
   {
     "EventCode": "4D04E",

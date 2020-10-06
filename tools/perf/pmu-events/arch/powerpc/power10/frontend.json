@@ -22,7 +22,7 @@
   {
     "EventCode": "10038",
     "EventName": "PM_DISP_STALL_TRANSLATION",
-    "BriefDescription": "Number of cycles in which instruction cannot be dispatched for this thread because the MMU is handling a translation miss."
+    "BriefDescription": "Cycles in which instruction cannot be dispatched for this thread because the MMU is handling a translation miss."
   },
   {
     "EventCode": "1003A",
@@ -102,12 +102,12 @@
   {
     "EventCode": "1E050",
     "EventName": "PM_DISP_STALL_HELD_STF_MAPPER_CYC",
-    "BriefDescription": "Dispatch held because the STF mapper/SRB was full. Includes GPR (count, link, tar), VSR, VMR, FPR"
+    "BriefDescription": "Cycles in which the NTC instruction is held at dispatch because the STF mapper/SRB was full. Includes GPR (count, link, tar), VSR, VMR, FPR"
   },
   {
     "EventCode": "1F054",
     "EventName": "PM_DTLB_HIT",
-    "BriefDescription": "Number of times the PTE required by the instruction was resident in the TLB (data TLB access). When MMCR1[16]=0 this event counts only demand hits. When MMCR1[16]=1 this event includes demand and prefetch. Applies to both HPT and RPT"
+    "BriefDescription": "The PTE required by the instruction was resident in the TLB (data TLB access). When MMCR1[16]=0 this event counts only demand hits. When MMCR1[16]=1 this event includes demand and prefetch. Applies to both HPT and RPT"
   },
   {
     "EventCode": "1F058",
@@ -132,12 +132,12 @@
   {
     "EventCode": "100F6",
     "EventName": "PM_IERAT_MISS",
-    "BriefDescription": "Number of I-ERAT reloads"
+    "BriefDescription": "I-ERAT reloads"
   },
   {
     "EventCode": "100F8",
     "EventName": "PM_DISP_STALL_CYC",
-    "BriefDescription": "Number of cycles the ICT has no itags assigned to this thread. No instructions have been dispatched for this thread"
+    "BriefDescription": "Cycles the ICT has no itags assigned to this thread. No instructions have been dispatched for this thread"
   },
   {
     "EventCode": "20114",
@@ -177,12 +177,12 @@
   {
     "EventCode": "2E01A",
     "EventName": "PM_DISP_STALL_HELD_XVFC_MAPPER_CYC",
-    "BriefDescription": "Dispatch held because the XVFC mapper/SRB was full"
+    "BriefDescription": "Cycles in which the NTC instruction is held at dispatch because the XVFC mapper/SRB was full"
   },
   {
     "EventCode": "2D12E",
     "EventName": "PM_MRK_DTLB_HIT",
-    "BriefDescription": "Number of times the  PTE required by the instruction was resident in the TLB (data TLB access) for the marked instruction. When MMCR1[16]=0 this event counts only demand hits. When MMCR1[16]=1 this event includes demand and prefetch.  Applies to both HPT and RPT"
+    "BriefDescription": "The PTE required by the instruction was resident in the TLB (data TLB access) for the marked instruction. When MMCR1[16]=0 this event counts only demand hits. When MMCR1[16]=1 this event includes demand and prefetch.  Applies to both HPT and RPT"
   },
   {
     "EventCode": "2404E",
@@ -297,7 +297,7 @@
   {
     "EventCode": "30018",
     "EventName": "PM_DISP_STALL_HELD_SCOREBOARD_CYC",
-    "BriefDescription": "Cycles in which dispatch is held while waiting on the Scoreboard.  This event combines VSCR and FPSCR together"
+    "BriefDescription": "Cycles in which the NTC instruction is held at dispatch while waiting on the Scoreboard.  This event combines VSCR and FPSCR together"
   },
   {
     "EventCode": "3001C",
@@ -387,7 +387,7 @@
   {
     "EventCode": "3D05C",
     "EventName": "PM_DISP_STALL_HELD_RENAME_CYC",
-    "BriefDescription": "Dispatch held because the mapper/SRB was full. Includes GPR (count, link, tar), VSR, VMR, FPR and XVFC"
+    "BriefDescription": "Cycles in which the NTC instruction is held at dispatch because the mapper/SRB was full. Includes GPR (count, link, tar), VSR, VMR, FPR and XVFC"
   },
   {
     "EventCode": "3E052",
@@ -407,7 +407,7 @@
   {
     "EventCode": "30064",
     "EventName": "PM_NTF_ISSUE_HOLD_CYC",
-    "BriefDescription": "Number of cycles in which the oldest instruction in the pipeline is being held at issue."
+    "BriefDescription": "Cycles in which the oldest instruction in the pipeline is being held at issue."
   },
   {
     "EventCode": "3006A",
@@ -427,7 +427,7 @@
   {
     "EventCode": "40006",
     "EventName": "PM_ISSUE_KILL",
-    "BriefDescription": "Number of cycles in which an instruction or group of instructions was primed to issue but was killed before being written.  This event increments once per occurance, regardless of how many instructions are included in the issue group"
+    "BriefDescription": "Cycles in which an instruction or group of instructions was primed to issue but was killed before being written.  This event increments once per occurance, regardless of how many instructions are included in the issue group"
   },
   {
     "EventCode": "40116",
@@ -497,7 +497,7 @@
   {
     "EventCode": "44056",
     "EventName": "PM_VECTOR_ST_CMPL",
-    "BriefDescription": "Number of vector store instructions completed"
+    "BriefDescription": "Vector store instructions completed"
   },
   {
     "EventCode": "4E052",

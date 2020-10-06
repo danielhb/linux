@@ -137,7 +137,7 @@
   {
     "EventCode": "45042",
     "EventName": "PM_DATA_RADIX_L4_PTE_FROM_DISTANT",
-    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included. If MMCR1[18] is 1, only process scoped accesses are included in this count."
+    "BriefDescription": "A Page Table Entry was reloaded to a level 4 page walk cache from the core's L2 data cache. If MMCR1[16] is 0 (default), this count includes only lines that were reloaded to satisfy a demand miss.  If MMCR1[16] is 1, this count includes both demand miss and prefetch reloads.  Further, if MMCR1[18] is 0 (default), only partition scoped accesses are included.  If MMCR1[18] is 1, only process scoped accesses are included in this count."
   },
   {
     "EventCode": "401EA",
@@ -147,6 +147,6 @@
   {
     "EventCode": "400F6",
     "EventName": "PM_BR_MPRED_CMPL",
-    "BriefDescription": "Number of Branch Mispredicts. Includes direction and target."
+    "BriefDescription": "Branch Mispredicts.  Includes direction and target."
   }
 ]

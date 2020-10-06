@@ -107,7 +107,7 @@
   {
     "EventCode": "2001A",
     "EventName": "PM_ITLB_HIT",
-    "BriefDescription": "Number of times the  PTE required to translate the instruction address was resident in the TLB (instruction TLB access). Applies to both HPT and RPT"
+    "BriefDescription": "The PTE required to translate the instruction address was resident in the TLB (instruction TLB access). Applies to both HPT and RPT"
   },
   {
     "EventCode": "2D12C",
@@ -277,7 +277,7 @@
   {
     "EventCode": "3006E",
     "EventName": "PM_CONSTANT_CLK",
-    "BriefDescription": "This event increments at a rate of 64 MHz"
+    "BriefDescription": "This event increments at a rate of 32 MHz"
   },
   {
     "EventCode": "301E2",
@@ -302,7 +302,7 @@
   {
     "EventCode": "4003E",
     "EventName": "PM_LD_CMPL",
-    "BriefDescription": "count of Loads completed"
+    "BriefDescription": "Loads completed"
   },
   {
     "EventCode": "4C040",
@@ -317,7 +317,7 @@
   {
     "EventCode": "4C144",
     "EventName": "PM_MRK_XFER_FROM_SRC_CYC_PMC4",
-    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[45:57]. Only reloads to satisfy a demand miss are included in this count "
+    "BriefDescription": "Cycles to reload a line from the source specified in MMCR3[45:57]. Only reloads to satisfy a demand miss are included in this count "
   },
   {
     "EventCode": "4C146",
@@ -327,7 +327,7 @@
   {
     "EventCode": "4C148",
     "EventName": "PM_MRK_DATA_FLUSHED_FROM_SRC_CYC_PMC4",
-    "BriefDescription": "Duration in cycles to reload a line from the source specified in MMCR3[0:10].  Only reloads to satisfy a demand miss that was later flushed are included in this count "
+    "BriefDescription": "Cycles to reload a line from the source specified in MMCR3[0:10].  Only reloads to satisfy a demand miss that was later flushed are included in this count "
   },
   {
     "EventCode": "4C054",

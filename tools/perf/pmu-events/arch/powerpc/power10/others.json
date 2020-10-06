@@ -22,7 +22,7 @@
   {
     "EventCode": "1002A",
     "EventName": "PM_PMC3_HELD_CYC",
-    "BriefDescription": "Number of cycles when the speculative counter for PMC3 is frozen"
+    "BriefDescription": "Cycles when the speculative counter for PMC3 is frozen"
   },
   {
     "EventCode": "10134",
@@ -32,7 +32,7 @@
   {
     "EventCode": "1505E",
     "EventName": "PM_LD_HIT_L1",
-    "BriefDescription": "Number of loads that finished without experiencing an L1 miss"
+    "BriefDescription": "Loads that finished without experiencing an L1 miss"
   },
   {
     "EventCode": "1D156",
@@ -42,7 +42,7 @@
   {
     "EventCode": "1D05E",
     "EventName": "PM_DISP_STALL_HELD_HALT_CYC",
-    "BriefDescription": "Dispatch held because of power management"
+    "BriefDescription": "Cycles in which the NTC instruction is held at dispatch because of power management"
   },
   {
     "EventCode": "1E054",
@@ -97,7 +97,7 @@
   {
     "EventCode": "20006",
     "EventName": "PM_DISP_STALL_HELD_ISSQ_FULL_CYC",
-    "BriefDescription": "Dispatch held due to Issue queue full. Includes issue queue and branch queue"
+    "BriefDescription": "Cycles in which the NTC instruction is held at dispatch due to Issue queue full. Includes issue queue and branch queue"
   },
   {
     "EventCode": "2000C",
@@ -112,7 +112,7 @@
   {
     "EventCode": "2E014",
     "EventName": "PM_STCX_FIN",
-    "BriefDescription": "Number of stcx instructions finished. This includes instructions in the speculative path of a branch that may be flushed"
+    "BriefDescription": "Stcx instructions finished. This includes instructions in the speculative path of a branch that may be flushed"
   },
   {
     "EventCode": "2E016",
@@ -137,7 +137,7 @@
   {
     "EventCode": "2504C",
     "EventName": "PM_PMC4_HELD_CYC",
-    "BriefDescription": "Number of cycles when the speculative counter for PMC4 is frozen"
+    "BriefDescription": "Cycles when the speculative counter for PMC4 is frozen"
   },
   {
     "EventCode": "2F04C",
@@ -217,12 +217,12 @@
   {
     "EventCode": "3C04E",
     "EventName": "PM_PMC1_HELD_CYC",
-    "BriefDescription": "Number of cycles when the speculative counter for PMC1 is frozen"
+    "BriefDescription": "Cycles when the speculative counter for PMC1 is frozen"
   },
   {
     "EventCode": "3F04A",
     "EventName": "PM_LSU_ST5_FIN",
-    "BriefDescription": "LSU Finished a PPC instruction in ST2 port"
+    "BriefDescription": "LSU Finished an internal operation in ST2 port"
   },
   {
     "EventCode": "30052",
@@ -297,7 +297,7 @@
   {
     "EventCode": "4000A",
     "EventName": "PM_DEBUG_TRIGGER",
-    "BriefDescription": "counts a trigger generated from the debug logic for lab use"
+    "BriefDescription": "A trigger generated from the debug logic for lab use"
   },
   {
     "EventCode": "40114",
@@ -372,7 +372,7 @@
   {
     "EventCode": "4C04A",
     "EventName": "PM_PMC2_HELD_CYC",
-    "BriefDescription": "Number of cycles when the speculative counter for PMC1 is frozen"
+    "BriefDescription": "Cycles when the speculative counter for PMC1 is frozen"
   },
   {
     "EventCode": "4E040",
@@ -432,7 +432,7 @@
   {
     "EventCode": "44054",
     "EventName": "PM_VECTOR_LD_CMPL",
-    "BriefDescription": "Number of vector load instructions completed"
+    "BriefDescription": "Vector load instructions completed"
   },
   {
     "EventCode": "44058",
