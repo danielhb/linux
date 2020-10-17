@@ -2588,16 +2588,22 @@ static void radix_flush_cpu(struct kvm *kvm, int cpu, struct kvm_vcpu *vcpu)
 {
 	struct kvm_nested_guest *nested = vcpu->arch.nested;
 	cpumask_t *cpu_in_guest;
+	cpumask_t *need_tlb_flush;
 	int i;
 
-	cpu = cpu_first_thread_sibling(cpu);
 	if (nested) {
-		cpumask_set_cpu(cpu, &nested->need_tlb_flush);
+		need_tlb_flush = &nested->need_tlb_flush;
 		cpu_in_guest = &nested->cpu_in_guest;
 	} else {
-		cpumask_set_cpu(cpu, &kvm->arch.need_tlb_flush);
+		need_tlb_flush = &kvm->arch.need_tlb_flush;
 		cpu_in_guest = &kvm->arch.cpu_in_guest;
 	}
+
+	cpu = cpu_first_thread_sibling(cpu);
+
+	for (i = 0; i < threads_per_core; ++i)
+		cpumask_set_cpu(cpu + i, need_tlb_flush);
+
 	/*
 	 * Make sure setting of bit in need_tlb_flush precedes
 	 * testing of cpu_in_guest bits.  The matching barrier on
@@ -2636,9 +2642,7 @@ static void kvmppc_prepare_radix_vcpu(struct kvm_vcpu *vcpu, int pcpu)
 	 * so we use a single bit in .need_tlb_flush for all 4 threads.
 	 */
 	if (prev_cpu != pcpu) {
-		if (prev_cpu >= 0 &&
-		    cpu_first_thread_sibling(prev_cpu) !=
-		    cpu_first_thread_sibling(pcpu))
+		if (prev_cpu >= 0)
 			radix_flush_cpu(kvm, prev_cpu, vcpu);
 		if (nested)
 			nested->prev_cpu[vcpu->arch.nested_vcpu_id] = pcpu;

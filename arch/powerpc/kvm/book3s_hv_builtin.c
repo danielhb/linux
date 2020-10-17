@@ -895,15 +895,6 @@ void kvmppc_check_need_tlb_flush(struct kvm *kvm, int pcpu,
 {
 	cpumask_t *need_tlb_flush;
 
-	/*
-	 * On POWER9, individual threads can come in here, but the
-	 * TLB is shared between the 4 threads in a core, hence
-	 * invalidating on one thread invalidates for all.
-	 * Thus we make all 4 threads use the same bit.
-	 */
-	if (cpu_has_feature(CPU_FTR_ARCH_300))
-		pcpu = cpu_first_thread_sibling(pcpu);
-
 	if (nested)
 		need_tlb_flush = &nested->need_tlb_flush;
 	else
