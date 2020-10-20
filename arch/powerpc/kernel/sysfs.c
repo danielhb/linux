@@ -636,6 +636,7 @@ SYSFS_SPRSETUP(purr, SPRN_PURR);
 SYSFS_SPRSETUP(spurr, SPRN_SPURR);
 SYSFS_SPRSETUP(pir, SPRN_PIR);
 SYSFS_SPRSETUP(tscr, SPRN_TSCR);
+SYSFS_SPRSETUP(rpr, SPRN_RPR);
 
 /*
   Lets only enable read for phyp resources and
@@ -646,6 +647,7 @@ static DEVICE_ATTR(spurr, 0400, show_spurr, NULL);
 static DEVICE_ATTR(purr, 0400, show_purr, store_purr);
 static DEVICE_ATTR(pir, 0400, show_pir, NULL);
 static DEVICE_ATTR(tscr, 0600, show_tscr, store_tscr);
+static DEVICE_ATTR(rpr, 0600, show_rpr, store_rpr);
 static DEVICE_ATTR(scratch, 0600, show_scratch, store_scratch);
 #endif /* CONFIG_PPC64 */
 
@@ -962,8 +964,10 @@ static int register_cpu_online(unsigned int cpu)
 		!firmware_has_feature(FW_FEATURE_LPAR))
 		device_create_file(s, &dev_attr_tscr);
 
-	if (!firmware_has_feature(FW_FEATURE_LPAR))
+	if (!firmware_has_feature(FW_FEATURE_LPAR)) {
 		device_create_file(s, &dev_attr_scratch);
+		device_create_file(s, &dev_attr_rpr);
+	}
 #endif /* CONFIG_PPC64 */
 
 #ifdef CONFIG_PPC_FSL_BOOK3E
@@ -1060,8 +1064,10 @@ static int unregister_cpu_online(unsigned int cpu)
 		!firmware_has_feature(FW_FEATURE_LPAR))
 		device_remove_file(s, &dev_attr_tscr);
 
-	if (!firmware_has_feature(FW_FEATURE_LPAR))
+	if (!firmware_has_feature(FW_FEATURE_LPAR)) {
 		device_remove_file(s, &dev_attr_scratch);
+		device_remove_file(s, &dev_attr_rpr);
+	}
 #endif /* CONFIG_PPC64 */
 
 #ifdef CONFIG_PPC_FSL_BOOK3E
