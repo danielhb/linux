@@ -899,6 +899,13 @@ ALT_FTR_SECTION_END_IFCLR(CPU_FTR_ARCH_300)
 	ld	r8,VCORE_LPCR(r5)
 	mtspr	SPRN_LPCR,r8
 	isync
+BEGIN_FTR_SECTION
+	/* P10 DD1 bug workaround - set LPIDR again */
+	ld	r9, VCORE_KVM(r5)
+	lwz	r7, KVM_LPID(r9)
+	mtspr	SPRN_LPID, r7
+	isync
+END_FTR_SECTION_IFSET(CPU_FTR_ARCH_31)
 
 	/*
 	 * Set the decrementer to the guest decrementer.
@@ -1955,6 +1962,12 @@ END_FTR_SECTION_IFSET(CPU_FTR_ARCH_300)
 	ld	r8,KVM_HOST_LPCR(r4)
 	mtspr	SPRN_LPCR,r8
 	isync
+BEGIN_FTR_SECTION
+	/* P10 DD1 bug workaround - set LPIDR again */
+	lwz	r7, KVM_HOST_LPID(r4)
+	mtspr	SPRN_LPID, r7
+	isync
+END_FTR_SECTION_IFSET(CPU_FTR_ARCH_31)
 48:
 #ifdef CONFIG_KVM_BOOK3S_HV_EXIT_TIMING
 	/* Finish timing, if we have a vcpu */
