@@ -3560,7 +3560,7 @@ static int kvmhv_load_hv_regs_and_go(struct kvm_vcpu *vcpu, u64 time_limit,
 		asm volatile(PPC_CP_ABORT);
 
 	mtspr(SPRN_LPID, vcpu->kvm->arch.host_lpid);	/* restore host LPID */
-	__asm__ __volatile__("slbia 6");
+	asm volatile(PPC_SLBIA(6));
 	isync();
 
 	vc->dpdes = mfspr(SPRN_DPDES);
@@ -4187,7 +4187,7 @@ int kvmhv_run_single_vcpu(struct kvm_vcpu *vcpu, u64 time_limit,
 	if (cpu_has_feature(CPU_FTR_HVMODE)) {
 		lpid = nested ? nested->shadow_lpid : kvm->arch.lpid;
 		mtspr(SPRN_LPID, lpid);
-		__asm__ __volatile__("slbia 6");
+		asm volatile(PPC_SLBIA(6));
 		isync();
 		kvmppc_check_need_tlb_flush(kvm, pcpu, nested);
 	}
@@ -4212,7 +4212,7 @@ int kvmhv_run_single_vcpu(struct kvm_vcpu *vcpu, u64 time_limit,
 
 	if (cpu_has_feature(CPU_FTR_HVMODE)) {
 		mtspr(SPRN_LPID, kvm->arch.host_lpid);
-		__asm__ __volatile__("slbia 6");
+		asm volatile(PPC_SLBIA(6));
 		isync();
 	}
 

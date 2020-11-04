@@ -62,7 +62,8 @@ unsigned long __kvmhv_copy_tofrom_guest_radix(int lpid, int pid,
 		if (old_pid != pid)
 			mtspr(SPRN_PID, pid);
 	}
-	__asm__ __volatile__("slbia 6");
+
+	asm volatile(PPC_SLBIA(6));
 	isync();
 
 	if (is_load)
@@ -75,7 +76,7 @@ unsigned long __kvmhv_copy_tofrom_guest_radix(int lpid, int pid,
 		mtspr(SPRN_PID, old_pid);
 	if (lpid != old_lpid) {
 		mtspr(SPRN_LPID, old_lpid);
-		__asm__ __volatile__("slbia 6");
+		asm volatile(PPC_SLBIA(6));
 	}
 	isync();
 
