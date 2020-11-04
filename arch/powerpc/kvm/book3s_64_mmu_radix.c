@@ -62,6 +62,7 @@ unsigned long __kvmhv_copy_tofrom_guest_radix(int lpid, int pid,
 		if (old_pid != pid)
 			mtspr(SPRN_PID, pid);
 	}
+	__asm__ __volatile__("slbia 6");
 	isync();
 
 	if (is_load)
@@ -72,8 +73,10 @@ unsigned long __kvmhv_copy_tofrom_guest_radix(int lpid, int pid,
 	/* switch the pid first to avoid running host with unallocated pid */
 	if (quadrant == 1 && pid != old_pid)
 		mtspr(SPRN_PID, old_pid);
-	if (lpid != old_lpid)
+	if (lpid != old_lpid) {
 		mtspr(SPRN_LPID, old_lpid);
+		__asm__ __volatile__("slbia 6");
+	}
 	isync();
 
 	preempt_enable();

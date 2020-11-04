@@ -3379,6 +3379,8 @@ END_MMU_FTR_SECTION_IFSET(MMU_FTR_TYPE_RADIX)
 4:	lwz	r7, KVM_HOST_LPID(r10)
 	mtspr	SPRN_LPID, r7
 	mtspr	SPRN_PID, r0
+	.machine "power9"
+	slbia	6
 	ld	r8, KVM_HOST_LPCR(r10)
 	mtspr	SPRN_LPCR, r8
 	isync
