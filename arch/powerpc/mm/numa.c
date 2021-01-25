@@ -54,6 +54,7 @@ EXPORT_SYMBOL(node_data);
 static int min_common_depth;
 static int n_mem_addr_cells, n_mem_size_cells;
 static int form1_affinity;
+static int numa_extension;
 
 #define MAX_DISTANCE_REF_POINTS 4
 static int distance_ref_points_depth;
@@ -327,6 +328,21 @@ static int __init find_min_common_depth(void)
 		form1_affinity = 1;
 	}
 
+	if (firmware_has_feature(FW_FEATURE_NUMA_EXTENSION)) {
+		dbg("Using numa extension\n");
+		numa_extension = 1;
+	}
+
+	if (numa_extension) {
+		// for debugging
+		// printk(" ------ Using numa extension -----\n");
+		// printk(" ------ read numa distance lookup table -----\n");
+	}
+	else {
+		// for debugging
+		// printk(" ------ NUMA extension is NOT enabled!  -----\n");
+	}
+
 	if (form1_affinity) {
 		depth = of_read_number(distance_ref_points, 1);
 	} else {
@@ -456,7 +472,6 @@ int of_drconf_to_nid_single(struct drmem_lmb *lmb)
 
 		index = lmb->aa_index * aa.array_sz;
 		initialize_distance_lookup_table(nid, &aa.arrays[index]);
-		}
 	}
 
 	return nid;
