@@ -60,6 +60,8 @@ static int numa_extension;
 static int distance_ref_points_depth;
 static const __be32 *distance_ref_points;
 static int distance_lookup_table[MAX_NUMNODES][MAX_DISTANCE_REF_POINTS];
+static int numa_distance_table[MAX_NUMNODES][MAX_NUMNODES];
+
 
 /*
  * Allocate node_to_cpumask_map based on number of available nodes
@@ -194,6 +196,9 @@ int __node_distance(int a, int b)
 	if (!form1_affinity)
 		return ((a == b) ? LOCAL_DISTANCE : REMOTE_DISTANCE);
 
+	if (numa_extension)
+		return numa_distance_table[a][b];
+
 	for (i = 0; i < distance_ref_points_depth; i++) {
 		if (distance_lookup_table[a][i] == distance_lookup_table[b][i])
 			break;
@@ -222,6 +227,48 @@ static void initialize_distance_lookup_table(int nid,
 
 		entry = &associativity[be32_to_cpu(distance_ref_points[i]) - 1];
 		distance_lookup_table[nid][i] = of_read_number(entry, 1);
+	}
+}
+
+static void initialize_numa_distance_lookup_table(struct device_node *root)
+{
+	const __be32 *numa_dist_table;
+	const __be32 *numa_dist_indexes;
+	int numa_dist_table_length;
+	int numa_dist_indexes_length;
+	int k, curr_row, curr_column;
+
+	if (!numa_extension)
+		return;
+
+	numa_dist_table = of_get_property(root, "ibm,numa-distance-lookup-table", NULL);
+	numa_dist_indexes = of_get_property(root, "ibm,numa-distance-lookup-indexes", NULL);
+
+	// first element of the indexes array is the size
+	curr_row = 1;
+	curr_column = 1;
+	numa_dist_table_length = of_read_number(&numa_dist_table[0], 1);
+	numa_dist_indexes_length = of_read_number(&numa_dist_indexes[0], 1);
+
+	// for debugging
+	// printk("---- numa_dist_table_len = %d, numa_dist_indexes_len = %d \n",
+			// numa_dist_table_length, numa_dist_indexes_length);
+
+	for (k = 1; k <= numa_dist_table_length; k++) {
+		int nodeA = of_read_number(&numa_dist_indexes[curr_row], 1);
+		int nodeB = of_read_number(&numa_dist_indexes[curr_column++], 1);
+
+		numa_distance_table[nodeA][nodeB] = of_read_number(&numa_dist_table[k], 1);
+
+		// for debugging
+		// printk(" dist[%d][%d]=%d ", nodeA, nodeB, numa_distance_table[nodeA][nodeB]);
+
+		if (curr_column > numa_dist_indexes_length) {
+			curr_column = 1;
+			curr_row++;
+			// for debugging
+			// printk("\n");
+		}
 	}
 }
 
@@ -337,6 +384,7 @@ static int __init find_min_common_depth(void)
 		// for debugging
 		// printk(" ------ Using numa extension -----\n");
 		// printk(" ------ read numa distance lookup table -----\n");
+		initialize_numa_distance_lookup_table(root);
 	}
 	else {
 		// for debugging
