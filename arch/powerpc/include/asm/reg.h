@@ -384,6 +384,9 @@
 #define SPRN_HRMOR	0x139	/* Real mode offset register */
 #define SPRN_HSRR0	0x13A	/* Hypervisor Save/Restore 0 */
 #define SPRN_HSRR1	0x13B	/* Hypervisor Save/Restore 1 */
+#define SPRN_HASHKEYR	0x1D4	/* ROP userspace hash */
+#define SPRN_HASHPKEYR	0x1D5	/* ROP Privilege hash */
+#define SPRN_DEXCR	0x33c	/* DEXCR wr/rd */
 #define SPRN_ASDR	0x330	/* Access segment descriptor register */
 #define SPRN_IC		0x350	/* Virtual Instruction Count */
 #define SPRN_VTB	0x351	/* Virtual Time Base */
@@ -482,6 +485,7 @@
 #define   PCR_VSX_DIS	(__MASK(63-1))	/* VSX disable (bit NA since POWER8) */
 #define   PCR_TM_DIS	(__MASK(63-2))	/* Trans. memory disable (POWER8) */
 #define   PCR_MMA_DIS	(__MASK(63-3)) /* Matrix-Multiply Accelerator */
+#define   PCR_DEXCR_DIS	(__MASK(63-4)) /* DEXCR */
 #define   PCR_HIGH_BITS	(PCR_MMA_DIS | PCR_VEC_DIS | PCR_VSX_DIS | PCR_TM_DIS)
 /*
  * These bits are used in the function kvmppc_set_arch_compat() to specify and

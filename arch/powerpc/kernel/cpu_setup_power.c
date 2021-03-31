@@ -239,6 +239,7 @@ void __setup_cpu_power10(unsigned long offset, struct cpu_spec *t)
 	if (!init_hvmode_206(t))
 		return;
 
+	mtspr(SPRN_DEXCR, 0x400000004000000);
 	mtspr(SPRN_PSSCR, 0);
 	mtspr(SPRN_LPID, 0);
 	mtspr(SPRN_PID, 0);
@@ -261,6 +262,7 @@ void __restore_cpu_power10(void)
 	if (!(msr & MSR_HV))
 		return;
 
+	mtspr(SPRN_DEXCR, 0x400000004000000);
 	mtspr(SPRN_PSSCR, 0);
 	mtspr(SPRN_LPID, 0);
 	mtspr(SPRN_PID, 0);

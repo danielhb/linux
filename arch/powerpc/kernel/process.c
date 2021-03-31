@@ -1186,6 +1186,9 @@ static inline void restore_sprs(struct thread_struct *old_thread,
 	if (cpu_has_feature(CPU_FTR_P9_TIDR) &&
 	    old_thread->tidr != new_thread->tidr)
 		mtspr(SPRN_TIDR, new_thread->tidr);
+
+	if (cpu_has_feature(CPU_FTR_ARCH_31))
+		mtspr(SPRN_HASHKEYR, new_thread->hashkeyr);
 #endif
 
 }
@@ -1884,6 +1887,8 @@ void start_thread(struct pt_regs *regs, unsigned long start, unsigned long sp)
 	current->thread.tm_tfiar = 0;
 	current->thread.load_tm = 0;
 #endif /* CONFIG_PPC_TRANSACTIONAL_MEM */
+	if (cpu_has_feature(CPU_FTR_ARCH_31))
+		current->thread.hashkeyr = get_random_long();
 
 }
 EXPORT_SYMBOL(start_thread);

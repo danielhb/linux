@@ -637,6 +637,7 @@ SYSFS_SPRSETUP(spurr, SPRN_SPURR);
 SYSFS_SPRSETUP(pir, SPRN_PIR);
 SYSFS_SPRSETUP(tscr, SPRN_TSCR);
 SYSFS_SPRSETUP(rpr, SPRN_RPR);
+SYSFS_SPRSETUP(dexcr, SPRN_DEXCR);
 
 /*
   Lets only enable read for phyp resources and
@@ -649,6 +650,7 @@ static DEVICE_ATTR(pir, 0400, show_pir, NULL);
 static DEVICE_ATTR(tscr, 0600, show_tscr, store_tscr);
 static DEVICE_ATTR(rpr, 0600, show_rpr, store_rpr);
 static DEVICE_ATTR(scratch, 0600, show_scratch, store_scratch);
+static DEVICE_ATTR(dexcr, 0600, show_dexcr, store_dexcr);
 #endif /* CONFIG_PPC64 */
 
 #ifdef HAS_PPC_PMC_CLASSIC
@@ -968,6 +970,9 @@ static int register_cpu_online(unsigned int cpu)
 		device_create_file(s, &dev_attr_scratch);
 		device_create_file(s, &dev_attr_rpr);
 	}
+
+	if (cpu_has_feature(CPU_FTR_ARCH_31))
+		device_create_file(s, &dev_attr_dexcr);
 #endif /* CONFIG_PPC64 */
 
 #ifdef CONFIG_PPC_FSL_BOOK3E
@@ -1068,6 +1073,9 @@ static int unregister_cpu_online(unsigned int cpu)
 		device_remove_file(s, &dev_attr_scratch);
 		device_remove_file(s, &dev_attr_rpr);
 	}
+
+	if (cpu_has_feature(CPU_FTR_ARCH_31))
+		device_remove_file(s, &dev_attr_dexcr);
 #endif /* CONFIG_PPC64 */
 
 #ifdef CONFIG_PPC_FSL_BOOK3E

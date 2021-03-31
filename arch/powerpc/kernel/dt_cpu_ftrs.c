@@ -580,6 +580,18 @@ static int __init feat_enable_mma(struct dt_cpu_feature *f)
 	return 1;
 }
 
+static int __init feat_enable_dexcr(struct dt_cpu_feature *f)
+{
+	u64 pcr;
+
+	feat_enable(f);
+	pcr = mfspr(SPRN_PCR);
+	pcr &= ~PCR_DEXCR_DIS;
+	mtspr(SPRN_PCR, pcr);
+
+	return 1;
+}
+
 struct dt_cpu_feature_match {
 	const char *name;
 	int (*enable)(struct dt_cpu_feature *f);
@@ -659,6 +671,7 @@ static struct dt_cpu_feature_match __initdata
 	{"prefix-instructions", feat_enable, 0},
 	{"matrix-multiply-assist", feat_enable_mma, 0},
 	{"debug-facilities-v31", feat_enable, CPU_FTR_DAWR1},
+	{"dynamic-execution-control-facility", feat_enable_dexcr, 0},
 };
 
 static bool __initdata using_dt_cpu_ftrs;
