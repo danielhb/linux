@@ -1059,6 +1059,7 @@ void handle_hmi_exception(struct pt_regs *regs)
 	set_irq_regs(old_regs);
 }
 
+
 void unknown_exception(struct pt_regs *regs)
 {
 	enum ctx_state prev_state = exception_enter();
@@ -1069,6 +1070,34 @@ void unknown_exception(struct pt_regs *regs)
 	_exception(SIGTRAP, regs, TRAP_UNK, 0);
 
 	exception_exit(prev_state);
+}
+
+int tbegin_emulation(struct pt_regs *regs) {
+
+	u32 instword;
+
+	instword = mfspr(SPRN_HEIR);
+
+	/* Do a few checks */
+	if (!((instword & 0xfc0007fe) == PPC_INST_TBEGIN))
+		/* not a tbegin */
+		return -1;
+	if (!(cpu_has_feature(CPU_FTR_ARCH_31)) || cpu_has_feature(CPU_FTR_TM))
+		return -1;
+
+	/* emulate as illegal instruction */
+	regs->nip -= 4; /* softpatch is 1 instruction late */
+	_exception(SIGILL, regs, ILL_ILLOPC, regs->nip);
+	return 0;
+}
+
+void denorm_exception_emulation(struct pt_regs *regs)
+{
+	if (tbegin_emulation(regs) == 0)
+		return;
+
+	unknown_exception(regs);
+	return;
 }
 
 void instruction_breakpoint_exception(struct pt_regs *regs)

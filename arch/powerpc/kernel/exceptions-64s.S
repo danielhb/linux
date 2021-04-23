@@ -2740,7 +2740,7 @@ END_FTR_SECTION_IFSET(CPU_FTR_CFAR)
 EXC_COMMON_BEGIN(denorm_exception_common)
 	GEN_COMMON denorm_exception
 	addi	r3,r1,STACK_FRAME_OVERHEAD
-	bl	unknown_exception
+	bl	denorm_exception_emulation
 	b	interrupt_return
 
 	GEN_KVM denorm_exception
