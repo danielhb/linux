@@ -229,3 +229,47 @@ int kvmhv_p9_tm_emulation(struct kvm_vcpu *vcpu)
 
 	return RESUME_GUEST;
 }
+
+int kvmhv_synthetic_tm_emulation(struct kvm_vcpu *vcpu)
+{
+	u32 instr = vcpu->arch.emul_inst;
+	u64 msr = vcpu->arch.shregs.msr;
+	u64 texasr, tfiar;
+
+	if ((instr & PO_XOP_OPCODE_MASK) != PPC_INST_TBEGIN) {
+		/*
+		 * We shouldn't be here - tbegin is the only instruction
+		 * being trapped with TM disabled in P10.
+		 */
+		kvmppc_core_queue_program(vcpu, SRR1_PROGILL);
+		pr_warn_ratelimited("Unrecognized TM-related instruction %#x for emulation", instr);
+		return RESUME_GUEST;
+	}
+
+	/*
+	 * For P8 and P9 compat mode execution, tbegin fails with
+	 * TEXASR setting Faillure Persistent. These guests can
+	 * use their failure handler to fall back to non-transactional
+	 * mode.
+	 */
+	if (vcpu->arch.vcore->arch_compat == PVR_ARCH_207 ||
+		vcpu->arch.vcore->arch_compat == PVR_ARCH_300) {
+
+		tfiar = vcpu->arch.regs.nip & ~0x3ull;
+		texasr = TEXASR_FAILPERS | TEXASR_IMPLSPEC | TEXASR_FS | TEXASR_EXACT;
+		if (msr & MSR_PR) {
+			texasr |= TEXASR_PR;
+			tfiar |= 1;
+		}
+		vcpu->arch.tfiar = tfiar;
+		vcpu->arch.texasr = texasr;
+
+		return RESUME_GUEST;
+	}
+
+	/*
+	 * For P10 non-compat mode, tbegin must return SIGILL.
+	 */
+	kvmppc_core_queue_program(vcpu, SRR1_PROGILL);
+	return RESUME_GUEST;
+}

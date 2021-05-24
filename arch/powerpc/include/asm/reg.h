@@ -254,6 +254,8 @@
 #define SPRN_TEXASRU	0x83	/* ''	   ''	   ''	 Upper 32  */
 
 #define TEXASR_FC_LG	(63 - 7)	/* Failure Code */
+#define TEXASR_FP_LG	(63 - 7)	/* Failure Persistent */
+#define TEXASR_IS_LG	(63 - 15)	/* Implementation Specific */
 #define TEXASR_AB_LG	(63 - 31)	/* Abort */
 #define TEXASR_SU_LG	(63 - 32)	/* Suspend */
 #define TEXASR_HV_LG	(63 - 34)	/* Hypervisor state*/
@@ -270,6 +272,8 @@
 #define   TEXASR_EXACT	__MASK(TEXASR_EX_LG) /* TFIAR value is exact */
 #define   TEXASR_ROT	__MASK(TEXASR_ROT_LG)
 #define   TEXASR_FC	(ASM_CONST(0xFF) << TEXASR_FC_LG)
+#define   TEXASR_FAILPERS   __MASK(TEXASR_FP_LG) /* failure is persistent */
+#define   TEXASR_IMPLSPEC   __MASK(TEXASR_IS_LG) /* implementation-specific condition */
 
 #define SPRN_TFHAR	0x80	/* Transaction Failure Handler Addr */
 

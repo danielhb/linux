@@ -1453,6 +1453,17 @@ static int kvmppc_handle_exit_hv(struct kvm_vcpu *vcpu,
 #ifdef CONFIG_PPC_TRANSACTIONAL_MEM
 	case BOOK3S_INTERRUPT_HV_SOFTPATCH:
 		/*
+		 * P10 chips has issues dealing with tbegin, causing the
+		 * system to xstop sometimes. tbegin is being trapped via
+		 * IMC in bare-metal systems, which always have TM disabled,
+		 * using this softpatch interrupt to be emulated.
+		 */
+		if (cpu_has_feature(CPU_FTR_ARCH_31)) {
+			r = kvmhv_synthetic_tm_emulation(vcpu);
+			break;
+		}
+
+		/*
 		 * This occurs for various TM-related instructions that
 		 * we need to emulate on POWER9 DD2.2.  We have already
 		 * handled the cases where the guest was in real-suspend
